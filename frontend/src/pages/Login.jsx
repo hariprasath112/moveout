@@ -16,13 +16,13 @@ function Login() {
         }
     }
   return (
-    <div>
+    <>
       <Navbar />
     <form onSubmit={handleLogin}>
     <input id="passkeyInput" type="password" value={passkey} maxLength={4} onChange={(e) => setPasskey(e.target.value)} required/>
     <button type="submit">Login</button>
     </form>
-    </div>
+    </>
   )
 }
 
