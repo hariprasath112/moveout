@@ -16,13 +16,15 @@ function Login() {
         }
     }
   return (
-    <>
+     <div className="page-wrapper">
       <Navbar />
-    <form onSubmit={handleLogin}>
-    <input id="passkeyInput" type="password" value={passkey} maxLength={4} onChange={(e) => setPasskey(e.target.value)} required/>
-    <button type="submit">Login</button>
+      <div className="loginContainer">
+    <form className="passkeyForm" onSubmit={handleLogin}>
+    <input id="passkeyInput" type="text" value={passkey} maxLength="4" onChange={(e) => setPasskey(e.target.value)}  required/>
+    <button type="submit" id="passkeySubmit">Login</button>
     </form>
-    </>
+    </div>
+    </div>
   )
 }
 
