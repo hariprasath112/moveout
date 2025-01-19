@@ -1,6 +1,8 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Users } from './Users.jsx'
+import Navbar from '../components/Navbar.jsx'
+import Box from '../components/Box.jsx'
 
 function Categ() {
     const {passkey} = useParams()
@@ -10,7 +12,9 @@ function Categ() {
     }
   return (
     <>
+    <Navbar />
     <h2>hELLLO, {userData.name}</h2>
+    <Box />
     </>
   )
 }

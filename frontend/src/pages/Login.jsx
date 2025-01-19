@@ -13,6 +13,8 @@ function Login() {
             navigate(`/${passkey}`)
         }else{
             alert('Invalid passkey')
+            setPasskey('');
+            
         }
     }
   return (
@@ -21,7 +23,7 @@ function Login() {
       <div className="loginContainer">
     <form className="passkeyForm" onSubmit={handleLogin}>
     <input id="passkeyInput" type="text" value={passkey} maxLength="4" onChange={(e) => setPasskey(e.target.value)} autoComplete='off' required/>
-    <button type="submit" id="passkeySubmit">Login</button>
+    <button type="submit" id="passkeySubmit" >Connect</button>
     </form>
     </div>
     </div>
