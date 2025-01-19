@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
 html,body {
   margin: 0;
   padding: 0;
@@ -8,6 +11,12 @@ html,body {
   height: 100%;
   bottom: 0;
   min-height: 100vh;
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 /* Sample navbar (unchanged) */
 .navbar {
@@ -20,7 +29,8 @@ html,body {
 
 .navbar-title {
   margin: 0;
-  font-family: sans-serif;
+  
+
   color: #000;
 }
 
@@ -50,7 +60,7 @@ html,body {
  
   height: 10vw;               
   font-size: 7vw;               
-
+  letter-spacing: 1vw;
   padding: 0 5vw;              
   width: 100%;
   box-sizing: border-box;
@@ -59,6 +69,17 @@ html,body {
   margin-bottom: 1rem;         
 }
 
+.passkeyForm button {
+  width: 100%;
+  font-size: 1.5rem;           /* large text for the button */
+  padding: 0.75rem 1.5rem;     /* vertical and horizontal padding */
+  border: none;                /* remove default border */
+  border-radius: 0.4rem;       /* slightly rounded corners */
+  background-color: #4CAF50;   /* a nice green shade */
+  color: #fff;                 /* white text */
+  cursor: pointer;             /* pointer on hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
 /* 
   On screens <= 768px, .passkeyForm is 90% of the viewport width 
