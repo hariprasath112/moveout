@@ -46,12 +46,19 @@ html,body {
   box-sizing: border-box; /* recommended for consistent sizing */
 }
 
-/* Let the input fill the entire .passkeyForm width */
 .passkeyForm input[type="text"] {
+ 
+  height: 10vw;               
+  font-size: 7vw;               
+
+  padding: 0 5vw;              
   width: 100%;
-  padding: 10vh;      /* will shrink on smaller screens, but you can adjust */
   box-sizing: border-box;
+  text-align: center;         
+  border: 1px solid #ccc;     
+  margin-bottom: 1rem;         
 }
+
 
 /* 
   On screens <= 768px, .passkeyForm is 90% of the viewport width 
@@ -61,5 +68,10 @@ html,body {
   .passkeyForm {
     
     width: 90vw;
+  }
+  .passkeyForm input[type="text"] {
+ 
+    height: 30vw;               
+    font-size: 28vw;   
   }
 }
