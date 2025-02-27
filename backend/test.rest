@@ -1,0 +1,10 @@
+GET http://localhost:1701
+###
+
+POST http://localhost:1701/
+Content-Type: application/json
+
+{
+  "name": "jon",
+  "location": "earth"
+}
