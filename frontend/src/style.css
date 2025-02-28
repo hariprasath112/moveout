@@ -5,6 +5,7 @@ html,body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: sans-serif;
 }
 
 .page-wrapper {
@@ -103,4 +104,56 @@ html,body {
     height: 30vw;               
     font-size: 28vw;   
   }
+}
+
+
+/* box */
+/* Grid container for boxes */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Doubled box size */
+  gap: 1.5rem;  /* Increased spacing between boxes */
+  padding: 2rem;
+  justify-content: center;
+}
+
+/* Box container */
+.box {
+  border: 3px solid black; /* Thicker outer border */
+  padding: 0; /* Remove padding */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Make it fill grid column */
+}
+
+/* Image wrapper */
+/* Image container: Controls aspect ratio */
+/* Image container with fixed aspect ratio */
+.image-container {
+  width: 100%;
+  height: 300px; /* Ensures consistent box height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures no overflow */
+}
+
+/* Image inside container */
+.boxImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fills the box without extreme shrinking */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+/* Title text */
+.boxText {
+  font-weight: bold;
+  font-size: 2rem; /* Make text bigger */
+  padding: 1rem;
+  margin: 0;
 }

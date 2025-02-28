@@ -1,17 +1,15 @@
-import React from 'react'
-import '../style.css'
+import React from 'react';
+import '../style.css';
 
-function Box() {
+function Box({ image, text }) {
   return (
-    <>
     <div className="box">
-        <a href='#' className='boxLink'>
-        <img src="https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg" className="boxImage"/>
-        <p className='boxText'>dsdad</p>
-        </a>
+      <div className="image-container">
+        <img src={image} alt={text} className="boxImage" />
+      </div>
+      <p className="boxText">{text}</p>
     </div>
-    </>
-  )
+  );
 }
 
-export default Box
+export default Box;
