@@ -23,7 +23,7 @@ function Categ() {
   return (
     <>
     <Navbar />
-    <h2>You are at {userData.name}</h2>
+    <h2>&ensp;You are at {userData.name}</h2>
     <div className="grid-container">
         {boxList.map((item) => (
           <Box key={item.id} image={item.image} text={item.text} />

@@ -1,25 +1,44 @@
-const express = require('express')
-const pool  = require('./db')
-const port = 1701
+const express = require('express');
+const cors = require('cors');
+const { Pool } = require('pg');
 
-const app = express()
-app.use(express.json())
+const app = express();
+const port = 5432;
 
-app.get('/', (req, res) => {
-    res.sendStatus(200)
-})
-app.post('/',(req,res) => {
-    const { name, location} = req.body
-    res.sendStatus(200).send({message: `Hello ${name} from ${location}`})
-})
+// Allow cross-origin requests (from React on localhost:3000 or 5173, etc.)
+app.use(cors());
+app.use(express.json());
 
-app.get('/setup', async(req, res) => {
-    try {
-        await pool.query('CREATE TABLE IF NOT EXISTS moveout (id SERIAL PRIMARY KEY, name VARCHAR(100), location VARCHAR(100))')
-    } catch (err) {
-        console.log(err)
-        res.sendStatus(500)
+// PostgreSQL connection
+const pool = new Pool({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'your_db_name',
+  password: 'your_db_password',
+  port: 5432,
+});
+
+// GET user data by passkey
+app.get('/api/users/:passkey', async (req, res) => {
+  try {
+    const { passkey } = req.params;
+    const result = await pool.query(
+      'SELECT * FROM users WHERE passkey = $1',
+      [passkey]
+    );
+
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: 'Invalid passkey' });
     }
-})
 
-app.listen(port, () => console.log('Server has started on port:',port))
+    // Return the first matching row
+    res.json(result.rows[0]);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
+});

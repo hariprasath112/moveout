@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from './pages/Login.jsx';
 import Categ from './pages/Categ.jsx';
+import Submit from './pages/Submit.jsx';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route index element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/:passkey" element={<Categ />} />
+          <Route path="/:passkey/submit" element={<Submit />} />
         </Routes>
       </BrowserRouter>
     </>
