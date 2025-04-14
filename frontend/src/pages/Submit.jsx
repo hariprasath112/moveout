@@ -1,12 +1,23 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar.jsx';
 import '../style.css';
+import { useParams } from 'react-router-dom';
+import { itemDetails } from '../components/Data.jsx';
 
-function ItemPage() {
-  const [quantity, setQuantity] = useState(1);
-  const [weight, setWeight] = useState(10);
-  const [isEditable, setIsEditable] = useState(false);
+function Submit() {
 
+  const { value } = useParams();
+  const numvalue = Number(value);
+  const currentItem =
+    itemDetails.find((item) => item.id === numvalue) || {
+      name: "Default Item",
+      image: "https://hogfurniture.co/cdn/shop/articles/Home_collection.png",
+      weight: 99,
+    };
+    const [quantity, setQuantity] = useState(1);//change with data?
+    const [weight, setWeight] = useState(currentItem.weight);
+    const [isEditable, setIsEditable] = useState(false);
+  
   return (
     <>
   <div className="submit-wrapper">
@@ -14,17 +25,17 @@ function ItemPage() {
 
       <form
         className="item-form"
-        action="https://example.com/submit" /* or your actual endpoint */
+        action="https://example.com/submit" /* add endpoint */
         method="POST"
       >
         {/* Header: Title on left, Image on right (desktop) */}
         <div className="item-header">
-          <h1 className="item-title">Furniture</h1>
+          <h1 className="item-title">{currentItem.name}</h1>
           <img
-            src="https://hogfurniture.co/cdn/shop/articles/Home_collection.png"
-            alt="Furniture"
-            className="item-image"
-          />
+              src={currentItem.image}
+              alt={currentItem.name}
+              className="item-image"
+            />
         </div>
 
         {/* Details Section */}
@@ -69,4 +80,4 @@ function ItemPage() {
   );
 }
 
-export default ItemPage;
+export default Submit;

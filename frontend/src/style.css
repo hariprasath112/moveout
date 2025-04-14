@@ -90,8 +90,16 @@ html,body {
   max-width: 25vw;
 }
 
-
-
+/* Remove default hyperlink styles on .box-link and everything inside it */
+/* .box-link,
+.box-link:link,
+.box-link:visited,
+.box-link:hover,
+.box-link:active,
+.box-link * {
+  color: inherit !important;
+  text-decoration: none !important;
+} */
 
 
 @media (max-width: 768px) {

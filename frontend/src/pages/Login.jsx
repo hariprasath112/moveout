@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import {Users} from './Users.jsx'
+import {Users} from '../components/Data.jsx'
 import Navbar from '../components/Navbar.jsx'
 
 function Login() {
