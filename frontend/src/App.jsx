@@ -14,7 +14,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/:passkey" element={<Categ />} />
           <Route path="/:passkey/submit" element={<Submit />} />
-          <Route path="/:submit/:value" element={<Submit />} />
+          <Route path="/:passkey/:submit/:value" element={<Submit />} />
         </Routes>
       </BrowserRouter>
     </>
