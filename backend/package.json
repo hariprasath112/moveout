@@ -1,4 +1,6 @@
 {
+  "name": "moveout",
+  
   "scripts": {
     "dev": "node server.js"
   },
