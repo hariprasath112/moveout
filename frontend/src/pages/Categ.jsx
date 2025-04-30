@@ -18,8 +18,8 @@ function Categ() {
     //handle box click
     const handleBoxClick = (item) =>{
       if (item.type==='end'){
-          navigate(`/${passkey}/submit/${item.value}`);
-          
+          navigate(`/submit/${item.value}`);
+          console.log("End type clicked", item.value);
       }else if(item.type === "lead") {
         switch (item.value){
           case 'table1':
@@ -29,6 +29,7 @@ function Categ() {
             setCurrentList(table2);
             break;
           default:
+            console.log("Invalid table value");
             break;
         }
         
