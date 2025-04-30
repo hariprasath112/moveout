@@ -1,16 +1,13 @@
-// src/pages/Submit.jsx
 import React, { useState } from 'react';
-import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar.jsx';
 import '../style.css';
+import { useParams } from 'react-router-dom';
 import { itemDetails } from '../components/Data.jsx';
 
-export default function Submit() {
-  const navigate = useNavigate();
-  const {passkey, value } = useParams();
-  const id = Number(value);
-  const userkey = passkey;
+function Submit() {
 
+  const { value } = useParams();
+  const numvalue = Number(value);
   const currentItem =
     itemDetails.find(i => i.id === id) || {
       id: 0,
@@ -18,63 +15,13 @@ export default function Submit() {
       image: 'https://hariprasath112.github.io/moveout/images/90.jpeg',
       weight: 0,
     };
-
-  const [quantity,   setQuantity]   = useState(currentItem.quantity || 1);
-  const [weight,     setWeight]     = useState(currentItem.weight);
-  const [isEditable, setIsEditable] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-
-  const handleSubmit = async (evt) => {
-    evt.preventDefault();
-
-    // 1) Prevent posting if lookup failed
-    if (currentItem.id === 0) {
-      alert("Cannot submit: invalid item.");
-      return;
-    }
-
-    setSubmitting(true);
-
-    // 2) Build the form‐style payload
-    const data = new URLSearchParams();
-    data.append('user',         userkey);
-    data.append('item_id',      currentItem.id);
-    data.append('product_name', currentItem.name);
-    data.append('quantity',     quantity);
-    data.append('weight',       weight);
-
-    try {
-      const res = await fetch(
-        'https://script.google.com/macros/s/AKfycbzg3qCqQpdm4iNpogvEv8M3Q14D6LygUFHLgNWZyBshrhZNrevWJ3upgnhxtcWWGYs2/exec',
-        {
-          method: 'POST',
-          mode:   'cors',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-          },
-          body: data.toString(),
-        }
-      );
-      if (!res.ok) {
-        throw new Error(`Server returned ${res.status}`);
-      }
-
-      const json = await res.json();
-      if (json.status === 'success') {
-        // Navigate back to your categ page (or wherever)
-        navigate(`/${userkey}`);
-      } else {
-        throw new Error(json.message || 'Unknown server error');
-      }
-    } catch (err) {
-      console.error(err);
-      alert('Submission failed:\nPlease try again :(');
-      setSubmitting(false);
-    }
-  };
-
+    const [quantity, setQuantity] = useState(1);//change with data?
+    const [weight, setWeight] = useState(currentItem.weight);
+    const [isEditable, setIsEditable] = useState(false);
+  
   return (
-    <div className="submit-wrapper">
+    <>
+  <div className="submit-wrapper">
       <Navbar />
 
       <form className="item-form" onSubmit={handleSubmit}>
@@ -91,6 +38,7 @@ export default function Submit() {
           />
         </div>
 
+        {/* Details Section */}
         <div className="details-container">
           <div className="input-group">
             <label>QTY</label>
@@ -99,9 +47,10 @@ export default function Submit() {
               name="quantity"
               value={quantity}
               min="1"
-              onChange={e => setQuantity(e.target.value)}
+              onChange={(e) => setQuantity(e.target.value)}
             />
           </div>
+
           <div className="input-group">
             <label>ESTIMATED WEIGHT</label>
             <div className="weight-input">
@@ -110,22 +59,25 @@ export default function Submit() {
                 name="weight"
                 value={weight}
                 disabled={!isEditable}
-                onChange={e => setWeight(e.target.value)}
+                onChange={(e) => setWeight(e.target.value)}
               />
               <span>LB</span>
             </div>
           </div>
+
           <span className="edit-text" onClick={() => setIsEditable(true)}>
             edit
           </span>
         </div>
 
+        {/* Submit Button */}
         <div className="slide-button">
-          <button type="submit" disabled={submitting}>
-            {submitting ? 'Submitting…' : 'SUBMIT'}
-          </button>
+          <button type="submit">SUBMIT</button>
         </div>
       </form>
-    </div>
+      </div>
+    </>
   );
 }
+
+export default Submit;
