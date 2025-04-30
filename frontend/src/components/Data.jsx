@@ -1,18 +1,8 @@
 export const Users = {
-  '1111': { name: 'January' },
-  '2222': { name: 'February' },
-  '3333': { name: 'March' },
-  '4444': { name: 'April' },
-  '5555': { name: 'May' },
-  '6666': { name: 'June' },
-  '7777': { name: 'July' },
-  '8888': { name: 'August' },
-  '9999': { name: 'September' },
-  '1234': { name: 'October' },
-  '5678': { name: 'November' },
-  '2345': { name: 'December' },
-};
-
+    '1111': { name: 'Station ABC' },
+    '2222': { name: 'Dropoff XYZ' },
+    '3333': { name: 'Camp X'},
+  }
 
 export const table1 = [
     { id: 1, type:"end", value:23, image: "https://hogfurniture.co/cdn/shop/articles/Home_collection.png", text: "Category 1" },
