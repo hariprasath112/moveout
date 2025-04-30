@@ -94,9 +94,9 @@ export const table8 = [
 ];
 
 export const table9 = [
-  { id: 259, type: "lead", value: 59, image: "https://hariprasath112.github.io/moveout/images/59.png", text: "Cooking/Prep Tools" },
-  { id: 275, type: "lead", value: 75, image: "https://hariprasath112.github.io/moveout/images/75.png", text: "Dining Essentials" },
-  { id: 272, type: "lead", value: 72, image: "https://hariprasath112.github.io/moveout/images/72.png", text: "Storage Supplies" },
+  { id: 259, type: "lead", value: "table15", image: "https://hariprasath112.github.io/moveout/images/59.png", text: "Cooking/Prep Tools" },
+  { id: 275, type: "lead", value: "table16", image: "https://hariprasath112.github.io/moveout/images/75.png", text: "Dining Essentials" },
+  { id: 272, type: "lead", value: "table17", image: "https://hariprasath112.github.io/moveout/images/72.png", text: "Storage Supplies" },
 
 ];
 
@@ -120,8 +120,8 @@ export const table11 = [
 ];
 
 export const table12 = [
-  { id: 307, type: "end", value: 107, image: "https://hariprasath112.github.io/moveout/images/107.jpeg", text: "Tech/Workspace" },
-  { id: 296, type: "end", value: 96, image: "https://hariprasath112.github.io/moveout/images/96.jpeg", text: "School/Work Supplies" },
+  { id: 307, type: "lead", value: "table18", image: "https://hariprasath112.github.io/moveout/images/107.jpeg", text: "Tech/Workspace" },
+  { id: 296, type: "lead", value: "table19", image: "https://hariprasath112.github.io/moveout/images/96.jpeg", text: "School/Work Supplies" },
 ];
 export const table13 = [
   { id: 1, type: "end", value: 1, image: "https://hariprasath112.github.io/moveout/images/1.png", text: "Airfryer" },

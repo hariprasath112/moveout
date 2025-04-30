@@ -36,7 +36,7 @@ html,body {
 
 .navbar-title {
   margin: 0;
-  
+  text-decoration: none;
 
   color: #000;
 }
@@ -161,7 +161,7 @@ html,body {
 .boxImage {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Fills the box without extreme shrinking */
+  object-fit: contain; /* Fills the box without extreme shrinking */
   max-width: 100%;
   max-height: 100%;
 }

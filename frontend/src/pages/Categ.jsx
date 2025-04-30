@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import Navbar from '../components/Navbar.jsx'
 import Box from '../components/Box.jsx'
 import '../style.css'
@@ -9,6 +9,7 @@ import { Users, table1, table2, table3, table4, table5, table6, table7, table8, 
 function Categ() {
     const {passkey} = useParams()
     const userData = Users[passkey]
+    
     let navigate = useNavigate();
     if (!userData) {
         return <h1>Invalid passkey</h1>
