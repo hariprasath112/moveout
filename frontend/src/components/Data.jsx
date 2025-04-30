@@ -15,27 +15,295 @@ export const Users = {
 
 
 export const table1 = [
-    { id: 1, type:"end", value:23, image: "https://hogfurniture.co/cdn/shop/articles/Home_collection.png", text: "Category 1" },
-    { id: 2, type:"lead", value:"table2", image: "https://static01.nyt.com/images/2019/09/25/dining/20cans1/merlin_160763178_71b0d03a-d399-4d81-ac4d-db47d601c594-videoSixteenByNineJumbo1600.jpg", text: "Category 2" },
-    { id: 3, type:"lead", value:"table2",image: "https://www.eliteyachtcharters.com.au/wp-content/uploads/2013/06/IMG_0753.jpg", text: "Category 3" },
-    { id: 4, type:"lead", value:"table2",image: "https://t4.ftcdn.net/jpg/03/64/41/07/360_F_364410756_Ev3WoDfNyxO9c9n4tYIsU5YBQWAP3UF8.jpg", text: "Category 4" },
-    { id: 5, type:"lead", value:"table2",image: "https://m.media-amazon.com/images/I/71wwwTV16iL.jpg", text: "Category 5" },
-    { id: 6, type:"lead", value:"table2",image: "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg", text: "Category 6" },
-    { id: 7, type:"lead", value:"table2",image: "https://m.media-amazon.com/images/I/61xxhaeUKIL.jpg", text: "Category 7" }
-  ];
-
-  export const table2 = [
-    { id: 21, type:"end", value:31, image: "https://hogfurniture.co/cdn/shop/articles/Home_collection.png", text: "Category 21" },
-    { id: 22, type:"lead", value:"table1", image: "https://static01.nyt.com/images/2019/09/25/dining/20cans1/merlin_160763178_71b0d03a-d399-4d81-ac4d-db47d601c594-videoSixteenByNineJumbo1600.jpg", text: "Category 22" },
-    { id: 23, type:"lead", value:"table2",image: "https://www.eliteyachtcharters.com.au/wp-content/uploads/2013/06/IMG_0753.jpg", text: "Category 23" },
-    { id: 24, type:"lead", value:"table3",image: "https://t4.ftcdn.net/jpg/03/64/41/07/360_F_364410756_Ev3WoDfNyxO9c9n4tYIsU5YBQWAP3UF8.jpg", text: "Category 24" },
-    { id: 25, type:"lead", value:"table4",image: "https://m.media-amazon.com/images/I/71wwwTV16iL.jpg", text: "Category 25" },
-    { id: 26, type:"lead", value:"table5",image: "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg", text: "Category 26" },
-    { id: 27, type:"lead", value:"table6",image: "https://m.media-amazon.com/images/I/61xxhaeUKIL.jpg", text: "Category 27" }
-  ];
-
-
-export const itemDetails = [
-  { id: 23, name: "Furniture", weight: "10", image: "https://hogfurniture.co/cdn/shop/articles/Home_collection.png" },
-  { id: 31, name: "Lead", weight: "2", image: "https://static01.nyt.com/images/2019/09/25/dining/20cans1/merlin_160763178_71b0d03a-d399-4d81-ac4d-db47d601c594-videoSixteenByNineJumbo1600.jpg" }
+  { id: 108, type: "lead", value: "table2", image: "https://hariprasath112.github.io/moveout/images/108.png", text: "Appliances" },
+  { id: 109, type: "lead", value: "table3", image: "https://hariprasath112.github.io/moveout/images/109.png", text: "Bathroom" },
+  { id: 110, type: "lead", value: "table4", image: "https://hariprasath112.github.io/moveout/images/110.png", text: "Bedroom" },
+  { id: 111, type: "lead", value: "table5", image: "https://hariprasath112.github.io/moveout/images/111.png", text: "Books" },
+  { id: 112, type: "lead", value: "table6", image: "https://hariprasath112.github.io/moveout/images/112.png", text: "Electronics" },
+  { id: 113, type: "lead", value: "table7", image: "https://hariprasath112.github.io/moveout/images/113.png", text: "Food" },
+  { id: 114, type: "lead", value: "table8", image: "https://hariprasath112.github.io/moveout/images/114.png", text: "Furniture" },
+  { id: 115, type: "lead", value: "table9", image: "https://hariprasath112.github.io/moveout/images/115.png", text: "Kitchen" },
+  { id: 116, type: "lead", value: "table10", image: "https://hariprasath112.github.io/moveout/images/116.png", text: "Misc" },
+  { id: 117, type: "lead", value: "table11", image: "https://hariprasath112.github.io/moveout/images/117.png", text: "Personal Care" },
+  { id: 118, type: "lead", value: "table12", image: "https://hariprasath112.github.io/moveout/images/118.png", text: "School/Office" },
 ];
+
+export const table2 = [
+  { id: 208, type: "lead", value: "table13", image: "https://hariprasath112.github.io/moveout/images/8.png", text: "Cooking Appliances" },
+  { id: 206, type: "lead", value: "table14", image: "https://hariprasath112.github.io/moveout/images/6.png", text: "Household Appliances" }
+];
+
+export const table3 = [
+  { id: 13, type: "end", value: 13, image: "https://hariprasath112.github.io/moveout/images/13.jpeg", text: "Bath Towel" },
+  { id: 14, type: "end", value: 14, image: "https://hariprasath112.github.io/moveout/images/14.jpeg", text: "Garbage Can (small)" },
+  { id: 15, type: "end", value: 15, image: "https://hariprasath112.github.io/moveout/images/15.jpeg", text: "Ironing Board" },
+  { id: 16, type: "end", value: 16, image: "https://hariprasath112.github.io/moveout/images/16.jpeg", text: "Laundry Basket" },
+  { id: 17, type: "end", value: 17, image: "https://hariprasath112.github.io/moveout/images/17.jpeg", text: "Laundry Hamper" },
+  { id: 18, type: "end", value: 18, image: "https://hariprasath112.github.io/moveout/images/18.jpeg", text: "Shower Caddies" },
+  { id: 19, type: "end", value: 19, image: "https://hariprasath112.github.io/moveout/images/19.jpeg", text: "Shower Curtain" },
+  { id: 20, type: "end", value: 20, image: "https://hariprasath112.github.io/moveout/images/20.jpeg", text: "Shower Hooks" },
+  { id: 21, type: "end", value: 21, image: "https://hariprasath112.github.io/moveout/images/21.jpeg", text: "Wash Cloth" },
+];
+
+export const table4 = [
+  { id: 22, type: "end", value: 22, image: "https://hariprasath112.github.io/moveout/images/22.png", text: "Blanket" },
+  { id: 23, type: "end", value: 23, image: "https://hariprasath112.github.io/moveout/images/23.png", text: "Comforter" },
+  { id: 24, type: "end", value: 24, image: "https://hariprasath112.github.io/moveout/images/24.png", text: "Mattress Topper" },
+  { id: 25, type: "end", value: 25, image: "https://hariprasath112.github.io/moveout/images/25.jpeg", text: "Pillows" },
+  { id: 26, type: "end", value: 26, image: "https://hariprasath112.github.io/moveout/images/26.jpeg", text: "Sheets and Pillowcases" },
+  { id: 27, type: "end", value: 27, image: "https://hariprasath112.github.io/moveout/images/27.jpeg", text: "Curtains" },
+  { id: 28, type: "end", value: 28, image: "https://hariprasath112.github.io/moveout/images/28.jpeg", text: "Rugs" },
+];
+
+export const table5 = [
+  { id: 29, type: "end", value: 29, image: "https://hariprasath112.github.io/moveout/images/29.jpeg", text: "Large Textbook" },
+  { id: 30, type: "end", value: 30, image: "https://hariprasath112.github.io/moveout/images/30.jpeg", text: "Small Paperback" },
+  { id: 31, type: "end", value: 31, image: "https://hariprasath112.github.io/moveout/images/31.jpeg", text: "Small Textbook" },
+];
+
+export const table6 = [
+  { id: 32, type: "end", value: 32, image: "https://hariprasath112.github.io/moveout/images/32.jpeg", text: "Hair Dryer" },
+  { id: 33, type: "end", value: 33, image: "https://hariprasath112.github.io/moveout/images/33.png", text: "Standing Fan" },
+  { id: 34, type: "end", value: 34, image: "https://hariprasath112.github.io/moveout/images/34.png", text: "Table Fan" },
+  { id: 35, type: "end", value: 35, image: "https://hariprasath112.github.io/moveout/images/35.jpeg", text: "TV - Large" },
+  { id: 36, type: "end", value: 36, image: "https://hariprasath112.github.io/moveout/images/36.png", text: "TV - Small" },
+  { id: 37, type: "end", value: 37, image: "https://hariprasath112.github.io/moveout/images/37.jpeg", text: "Vacuum Cleaner" },
+];
+
+export const table7 = [
+  { id: 38, type: "end", value: 38, image: "https://hariprasath112.github.io/moveout/images/38.jpeg", text: "Bottled Water" },
+  { id: 39, type: "end", value: 39, image: "https://hariprasath112.github.io/moveout/images/39.jpeg", text: "Candy" },
+  { id: 40, type: "end", value: 40, image: "https://hariprasath112.github.io/moveout/images/40.jpeg", text: "Canned Goods" },
+  { id: 41, type: "end", value: 41, image: "https://hariprasath112.github.io/moveout/images/41.jpeg", text: "Cereal" },
+  { id: 42, type: "end", value: 42, image: "https://hariprasath112.github.io/moveout/images/42.jpeg", text: "Mac and Cheese" },
+  { id: 43, type: "end", value: 43, image: "https://hariprasath112.github.io/moveout/images/43.jpeg", text: "Ramen" },
+  { id: 44, type: "end", value: 44, image: "https://hariprasath112.github.io/moveout/images/44.jpeg", text: "Sauce" },
+  { id: 45, type: "end", value: 45, image: "https://hariprasath112.github.io/moveout/images/45.jpeg", text: "Canned Soup" },
+  { id: 46, type: "end", value: 46, image: "https://hariprasath112.github.io/moveout/images/46.jpeg", text: "Dried Soup" },
+];
+
+export const table8 = [
+  { id: 47, type: "end", value: 47, image: "https://hariprasath112.github.io/moveout/images/47.png", text: "Chairs" },
+  { id: 48, type: "end", value: 48, image: "https://hariprasath112.github.io/moveout/images/48.png", text: "Dressers" },
+  { id: 49, type: "end", value: 49, image: "https://hariprasath112.github.io/moveout/images/49.avif", text: "Floor Lamps" },
+  { id: 50, type: "end", value: 50, image: "https://hariprasath112.github.io/moveout/images/50.png", text: "Futon" },
+  { id: 51, type: "end", value: 51, image: "https://hariprasath112.github.io/moveout/images/51.png", text: "Plastic Drawer" },
+  { id: 52, type: "end", value: 52, image: "https://hariprasath112.github.io/moveout/images/52.png", text: "Plastic Drawer - Wide" },
+  { id: 53, type: "end", value: 53, image: "https://hariprasath112.github.io/moveout/images/53.png", text: "Table" },
+  { id: 54, type: "end", value: 54, image: "https://hariprasath112.github.io/moveout/images/54.png", text: "Table Lamp" },
+];
+
+export const table9 = [
+  { id: 259, type: "lead", value: 59, image: "https://hariprasath112.github.io/moveout/images/59.png", text: "Cooking/Prep Tools" },
+  { id: 275, type: "lead", value: 75, image: "https://hariprasath112.github.io/moveout/images/75.png", text: "Dining Essentials" },
+  { id: 272, type: "lead", value: 72, image: "https://hariprasath112.github.io/moveout/images/72.png", text: "Storage Supplies" },
+
+];
+
+
+export const table10 = [
+  { id: 83, type: "end", value: 83, image: "https://hariprasath112.github.io/moveout/images/83.jpeg", text: "Board Games" },
+  { id: 84, type: "end", value: 84, image: "https://hariprasath112.github.io/moveout/images/84.png", text: "Seasonal/Holiday" },
+  { id: 85, type: "end", value: 85, image: "https://hariprasath112.github.io/moveout/images/85.png", text: "Sports/Games" },
+  { id: 86, type: "end", value: 86, image: "https://hariprasath112.github.io/moveout/images/86.png", text: "Stuffed Animals" },
+  { id: 87, type: "end", value: 87, image: "https://hariprasath112.github.io/moveout/images/87.png", text: "Yoga Mats" },
+];
+
+export const table11 = [
+  { id: 88, type: "end", value: 88, image: "https://hariprasath112.github.io/moveout/images/88.png", text: "Brushes/Combs" },
+  { id: 89, type: "end", value: 89, image: "https://hariprasath112.github.io/moveout/images/89.png", text: "Deodorant" },
+  { id: 90, type: "end", value: 90, image: "https://hariprasath112.github.io/moveout/images/90.jpeg", text: "First Aid" },
+  { id: 91, type: "end", value: 91, image: "https://hariprasath112.github.io/moveout/images/91.png", text: "Sanitary Items" },
+  { id: 92, type: "end", value: 92, image: "https://hariprasath112.github.io/moveout/images/92.png", text: "Shampoo" },
+  { id: 93, type: "end", value: 93, image: "https://hariprasath112.github.io/moveout/images/93.jpeg", text: "Soap" },
+  { id: 94, type: "end", value: 94, image: "https://hariprasath112.github.io/moveout/images/94.png", text: "Toothpaste" },
+];
+
+export const table12 = [
+  { id: 307, type: "end", value: 107, image: "https://hariprasath112.github.io/moveout/images/107.jpeg", text: "Tech/Workspace" },
+  { id: 296, type: "end", value: 96, image: "https://hariprasath112.github.io/moveout/images/96.jpeg", text: "School/Work Supplies" },
+];
+export const table13 = [
+  { id: 1, type: "end", value: 1, image: "https://hariprasath112.github.io/moveout/images/1.png", text: "Airfryer" },
+  { id: 4, type: "end", value: 4, image: "https://hariprasath112.github.io/moveout/images/4.png", text: "Electric Kettle" },
+  { id: 8, type: "end", value: 8, image: "https://hariprasath112.github.io/moveout/images/8.png", text: "Rice Cooker" },
+  { id: 9, type: "end", value: 9, image: "https://hariprasath112.github.io/moveout/images/9.png", text: "Toaster" },
+  { id: 10, type: "end", value: 10, image: "https://hariprasath112.github.io/moveout/images/10.png", text: "Toaster Oven" },
+  { id: 11, type: "end", value: 11, image: "https://hariprasath112.github.io/moveout/images/11.png", text: "Waffle Maker" },
+];
+
+export const table14 = [
+  { id: 2, type: "end", value: 2, image: "https://hariprasath112.github.io/moveout/images/2.png", text: "Blender" },
+  { id: 3, type: "end", value: 3, image: "https://hariprasath112.github.io/moveout/images/3.png", text: "Coffee Maker" },
+  { id: 5, type: "end", value: 5, image: "https://hariprasath112.github.io/moveout/images/5.png", text: "Iron" },
+  { id: 6, type: "end", value: 6, image: "https://hariprasath112.github.io/moveout/images/6.png", text: "Microwave" },
+  { id: 7, type: "end", value: 7, image: "https://hariprasath112.github.io/moveout/images/7.jpeg", text: "Minifridge" },
+  { id: 12, type: "end", value: 12, image: "https://hariprasath112.github.io/moveout/images/12.png", text: "Window AC" },
+];
+export const table15 = [
+  { id: 56, type: "end", value: 56, image: "https://hariprasath112.github.io/moveout/images/56.png", text: "Bottle Opener" },
+  { id: 59, type: "end", value: 59, image: "https://hariprasath112.github.io/moveout/images/59.png", text: "Casserole Dishes" },
+  { id: 60, type: "end", value: 60, image: "https://hariprasath112.github.io/moveout/images/60.png", text: "Cutting Board" },
+  { id: 62, type: "end", value: 62, image: "https://hariprasath112.github.io/moveout/images/62.png", text: "Graters" },
+  { id: 63, type: "end", value: 63, image: "https://hariprasath112.github.io/moveout/images/63.png", text: "Knives" },
+  { id: 64, type: "end", value: 64, image: "https://hariprasath112.github.io/moveout/images/64.png", text: "Large Pan" },
+  { id: 65, type: "end", value: 65, image: "https://hariprasath112.github.io/moveout/images/65.png", text: "Large Pot" },
+  { id: 66, type: "end", value: 66, image: "https://hariprasath112.github.io/moveout/images/66.png", text: "Measuring Spoons and Cups" },
+  { id: 77, type: "end", value: 77, image: "https://hariprasath112.github.io/moveout/images/77.png", text: "Small Pan" },
+  { id: 78, type: "end", value: 78, image: "https://hariprasath112.github.io/moveout/images/78.png", text: "Small Pot" },
+];
+
+export const table16 = [
+  { id: 57, type: "end", value: 57, image: "https://hariprasath112.github.io/moveout/images/57.png", text: "Bowls" },
+  { id: 61, type: "end", value: 61, image: "https://hariprasath112.github.io/moveout/images/61.png", text: "Dish Towel" },
+  { id: 68, type: "end", value: 68, image: "https://hariprasath112.github.io/moveout/images/68.png", text: "Mugs" },
+  { id: 69, type: "end", value: 69, image: "https://hariprasath112.github.io/moveout/images/69.png", text: "Paper Plates, Bowls, Cups" },
+  { id: 70, type: "end", value: 70, image: "https://hariprasath112.github.io/moveout/images/70.png", text: "Pitchers" },
+  { id: 73, type: "end", value: 73, image: "https://hariprasath112.github.io/moveout/images/73.png", text: "Plates" },
+  { id: 74, type: "end", value: 74, image: "https://hariprasath112.github.io/moveout/images/74.png", text: "Serving Utensils" },
+  { id: 75, type: "end", value: 75, image: "https://hariprasath112.github.io/moveout/images/75.jpeg", text: "Silverware" },
+  { id: 76, type: "end", value: 76, image: "https://hariprasath112.github.io/moveout/images/76.png", text: "Silverware Holders" },
+  { id: 81, type: "end", value: 81, image: "https://hariprasath112.github.io/moveout/images/81.jpeg", text: "Water Bottle" },
+];
+
+export const table17 = [
+  { id: 55, type: "end", value: 55, image: "https://hariprasath112.github.io/moveout/images/55.png", text: "Aluminum Foil" },
+  { id: 58, type: "end", value: 58, image: "https://hariprasath112.github.io/moveout/images/58.png", text: "Britas and Filters" },
+  { id: 67, type: "end", value: 67, image: "https://hariprasath112.github.io/moveout/images/67.png", text: "Misc Utensils" },
+  { id: 71, type: "end", value: 71, image: "https://hariprasath112.github.io/moveout/images/71.png", text: "Plastic Utensils" },
+  { id: 72, type: "end", value: 72, image: "https://hariprasath112.github.io/moveout/images/72.png", text: "Plastic Wrap" },
+  { id: 79, type: "end", value: 79, image: "https://hariprasath112.github.io/moveout/images/79.png", text: "Storage Containers" },
+  { id: 80, type: "end", value: 80, image: "https://hariprasath112.github.io/moveout/images/80.png", text: "Waste Basket" },
+  { id: 82, type: "end", value: 82, image: "https://hariprasath112.github.io/moveout/images/82.png", text: "Ziploc Bags" },
+];
+
+export const table18 = [
+  { id: 98, type: "end", value: 98, image: "https://hariprasath112.github.io/moveout/images/98.jpeg", text: "Desk Chair" },
+  { id: 99, type: "end", value: 99, image: "https://hariprasath112.github.io/moveout/images/99.jpeg", text: "Memoboard" },
+  { id: 100, type: "end", value: 100, image: "https://hariprasath112.github.io/moveout/images/100.jpeg", text: "Mouse" },
+  { id: 106, type: "end", value: 106, image: "https://hariprasath112.github.io/moveout/images/106.jpeg", text: "Tablet" },
+  { id: 107, type: "end", value: 107, image: "https://hariprasath112.github.io/moveout/images/107.jpeg", text: "Tabletstand" },
+];
+
+export const table19 = [
+  { id: 95, type: "end", value: 95, image: "https://hariprasath112.github.io/moveout/images/95.jpeg", text: "Backpack" },
+  { id: 96, type: "end", value: 96, image: "https://hariprasath112.github.io/moveout/images/96.jpeg", text: "Binder" },
+  { id: 97, type: "end", value: 97, image: "https://hariprasath112.github.io/moveout/images/97.png", text: "Calculators" },
+  { id: 101, type: "end", value: 101, image: "https://hariprasath112.github.io/moveout/images/101.png", text: "Notebook" },
+  { id: 102, type: "end", value: 102, image: "https://hariprasath112.github.io/moveout/images/102.png", text: "Paper" },
+  { id: 103, type: "end", value: 103, image: "https://hariprasath112.github.io/moveout/images/103.jpeg", text: "Paperclips, Magnetics Clips, Binder Clips" },
+  { id: 104, type: "end", value: 104, image: "https://hariprasath112.github.io/moveout/images/104.png", text: "Pens and Pencil" },
+  { id: 105, type: "end", value: 105, image: "https://hariprasath112.github.io/moveout/images/105.jpeg", text: "Ruler" },
+];
+
+
+  export const itemDetails = [
+    { id: 1, name: "Airfryer", weight: "15.1", image: "https://hariprasath112.github.io/moveout/images/1.png" },
+    { id: 2, name: "Blender", weight: "12.2", image: "https://hariprasath112.github.io/moveout/images/2.png" },
+    { id: 3, name: "Coffee Maker", weight: "10.8", image: "https://hariprasath112.github.io/moveout/images/3.png" },
+    { id: 4, name: "Electric Kettle", weight: "2.8", image: "https://hariprasath112.github.io/moveout/images/4.png" },
+    { id: 5, name: "Iron", weight: "3.0", image: "https://hariprasath112.github.io/moveout/images/5.png" },
+    { id: 6, name: "Microwave", weight: "23.6", image: "https://hariprasath112.github.io/moveout/images/6.png" },
+    { id: 7, name: "Minifridge", weight: "42.3", image: "https://hariprasath112.github.io/moveout/images/7.jpeg" },
+    { id: 8, name: "Rice Cooker", weight: "4.9", image: "https://hariprasath112.github.io/moveout/images/8.png" },
+    { id: 9, name: "Toaster", weight: "6.7", image: "https://hariprasath112.github.io/moveout/images/9.png" },
+    { id: 10, name: "Toaster Oven", weight: "13.5", image: "https://hariprasath112.github.io/moveout/images/10.png" },
+    { id: 11, name: "Waffle Maker", weight: "4.9", image: "https://hariprasath112.github.io/moveout/images/11.png" },
+    { id: 12, name: "Window AC", weight: "74.5", image: "https://hariprasath112.github.io/moveout/images/12.png" },
+    { id: 13, name: "Bath Towel", weight: "1.2", image: "https://hariprasath112.github.io/moveout/images/13.jpeg" },
+    { id: 14, name: "Garbage Can (small)", weight: "2.2", image: "https://hariprasath112.github.io/moveout/images/14.jpeg" },
+    { id: 15, name: "Ironing Board", weight: "16.1", image: "https://hariprasath112.github.io/moveout/images/15.jpeg" },
+    { id: 16, name: "Laundry Basket", weight: "2.9", image: "https://hariprasath112.github.io/moveout/images/16.jpeg" },
+    { id: 17, name: "Laundry Hamper", weight: "15", image: "https://hariprasath112.github.io/moveout/images/17.jpeg" },
+    { id: 18, name: "Shower Caddies", weight: "2.7", image: "https://hariprasath112.github.io/moveout/images/18.jpeg" },
+    { id: 19, name: "Shower Curtain", weight: "1.0", image: "https://hariprasath112.github.io/moveout/images/19.jpeg" },
+    { id: 20, name: "Shower Hooks", weight: "0.4", image: "https://hariprasath112.github.io/moveout/images/20.jpeg" },
+    { id: 21, name: "Wash Cloth", weight: "0.1", image: "https://hariprasath112.github.io/moveout/images/21.jpeg" },
+    { id: 22, name: "Blanket", weight: "1.5", image: "https://hariprasath112.github.io/moveout/images/22.png" },
+    { id: 23, name: "Comforter", weight: "4.4", image: "https://hariprasath112.github.io/moveout/images/23.png" },
+    { id: 24, name: "Mattress Topper", weight: "15", image: "https://hariprasath112.github.io/moveout/images/24.png" },
+    { id: 25, name: "Pillows", weight: "3.5", image: "https://hariprasath112.github.io/moveout/images/25.jpeg" },
+    { id: 26, name: "Sheets and Pillowcases", weight: "2.0", image: "https://hariprasath112.github.io/moveout/images/26.jpeg" },
+    { id: 27, name: "Curtains", weight: "2.0", image: "https://hariprasath112.github.io/moveout/images/27.jpeg" },
+    { id: 28, name: "Rugs", weight: "15.0", image: "https://hariprasath112.github.io/moveout/images/28.jpeg" },
+    { id: 29, name: "Large Textbook", weight: "5.0", image: "https://hariprasath112.github.io/moveout/images/29.jpeg" },
+    { id: 30, name: "Small Paperback", weight: "0.6", image: "https://hariprasath112.github.io/moveout/images/30.jpeg" },
+    { id: 31, name: "Small Textbook", weight: "2.75", image: "https://hariprasath112.github.io/moveout/images/31.jpeg" },
+    { id: 32, name: "Hair Dryer", weight: "2.0", image: "https://hariprasath112.github.io/moveout/images/32.jpeg" },
+    { id: 33, name: "Standing Fan", weight: "10.6", image: "https://hariprasath112.github.io/moveout/images/33.png" },
+    { id: 34, name: "Table Fan", weight: "6.4", image: "https://hariprasath112.github.io/moveout/images/34.png" },
+    { id: 35, name: "TV - Large", weight: "70.0", image: "https://hariprasath112.github.io/moveout/images/35.jpeg" },
+    { id: 36, name: "TV - Small", weight: "26.0", image: "https://hariprasath112.github.io/moveout/images/36.png" },
+    { id: 37, name: "Vacuum Cleaner", weight: "13.0", image: "https://hariprasath112.github.io/moveout/images/37.jpeg" },
+    { id: 38, name: "Bottled Water", weight: "1.1", image: "https://hariprasath112.github.io/moveout/images/38.jpeg" },
+    { id: 39, name: "Candy", weight: "0.1", image: "https://hariprasath112.github.io/moveout/images/39.jpeg" },
+    { id: 40, name: "Canned Goods", weight: "1.0", image: "https://hariprasath112.github.io/moveout/images/40.jpeg" },
+    { id: 41, name: "Cereal", weight: "0.8", image: "https://hariprasath112.github.io/moveout/images/41.jpeg" },
+    { id: 42, name: "Mac and Cheese", weight: "0.5", image: "https://hariprasath112.github.io/moveout/images/42.jpeg" },
+    { id: 43, name: "Ramen", weight: "0.2", image: "https://hariprasath112.github.io/moveout/images/43.jpeg" },
+    { id: 44, name: "Sauce", weight: "1.5", image: "https://hariprasath112.github.io/moveout/images/44.jpeg" },
+    { id: 45, name: "Canned Soup", weight: "1.2", image: "https://hariprasath112.github.io/moveout/images/45.jpeg" },
+    { id: 46, name: "Dried Soup", weight: "0.2", image: "https://hariprasath112.github.io/moveout/images/46.jpeg" },
+    { id: 47, name: "Chairs", weight: "17.5", image: "https://hariprasath112.github.io/moveout/images/47.png" },
+    { id: 48, name: "Dressers", weight: "30.0", image: "https://hariprasath112.github.io/moveout/images/48.png" },
+    { id: 49, name: "Floor Lamps", weight: "8.8", image: "https://hariprasath112.github.io/moveout/images/49.avif" },
+    { id: 50, name: "Futon", weight: "175", image: "https://hariprasath112.github.io/moveout/images/50.png" },
+    { id: 51, name: "Plastic Drawer", weight: "7.8", image: "https://hariprasath112.github.io/moveout/images/51.png" },
+    { id: 52, name: "Plastic Drawer - Wide", weight: "11.0", image: "https://hariprasath112.github.io/moveout/images/52.png" },
+    { id: 53, name: "Table", weight: "67.5", image: "https://hariprasath112.github.io/moveout/images/53.png" },
+    { id: 54, name: "Table Lamp", weight: "7.5", image: "https://hariprasath112.github.io/moveout/images/54.png" },
+    { id: 55, name: "Aluminum Foil", weight: "6.4", image: "https://hariprasath112.github.io/moveout/images/55.png" },
+    { id: 56, name: "Bottle Opener", weight: "0.25", image: "https://hariprasath112.github.io/moveout/images/56.png" },
+    { id: 57, name: "Bowls", weight: "1.5", image: "https://hariprasath112.github.io/moveout/images/57.png" },
+    { id: 58, name: "Britas and Filters", weight: "1.6", image: "https://hariprasath112.github.io/moveout/images/58.png" },
+    { id: 59, name: "Casserole Dishes", weight: "5.6", image: "https://hariprasath112.github.io/moveout/images/59.png" },
+    { id: 60, name: "Cutting Board", weight: "8.0", image: "https://hariprasath112.github.io/moveout/images/60.png" },
+    { id: 61, name: "Dish Towel", weight: "0.2", image: "https://hariprasath112.github.io/moveout/images/61.png" },
+    { id: 62, name: "Graters", weight: "0.7", image: "https://hariprasath112.github.io/moveout/images/62.png" },
+    { id: 63, name: "Knives", weight: "0.5", image: "https://hariprasath112.github.io/moveout/images/63.png" },
+    { id: 64, name: "Large Pan", weight: "2.3", image: "https://hariprasath112.github.io/moveout/images/64.png" },
+    { id: 65, name: "Large Pot", weight: "9.3", image: "https://hariprasath112.github.io/moveout/images/65.png" },
+    { id: 66, name: "Measuring Spoons and Cups", weight: "0.11", image: "https://hariprasath112.github.io/moveout/images/66.png" },
+    { id: 67, name: "Misc Utensils", weight: "2.0", image: "https://hariprasath112.github.io/moveout/images/67.png" },
+    { id: 68, name: "Mugs", weight: "1.0", image: "https://hariprasath112.github.io/moveout/images/68.png" },
+    { id: 69, name: "Paper Plates, Bowls, Cups", weight: "0.1", image: "https://hariprasath112.github.io/moveout/images/69.png" },
+    { id: 70, name: "Pitchers", weight: "1.0", image: "https://hariprasath112.github.io/moveout/images/70.png" },
+    { id: 71, name: "Plastic Utensils", weight: "0.5", image: "https://hariprasath112.github.io/moveout/images/71.png" },
+    { id: 72, name: "Plastic Wrap", weight: "2.0", image: "https://hariprasath112.github.io/moveout/images/72.png" },
+    { id: 73, name: "Plates", weight: "2.0", image: "https://hariprasath112.github.io/moveout/images/73.png" },
+    { id: 74, name: "Serving Utensils", weight: "0.3", image: "https://hariprasath112.github.io/moveout/images/74.png" },
+    { id: 75, name: "Silverware", weight: "1.0", image: "https://hariprasath112.github.io/moveout/images/75.jpeg" },
+    { id: 76, name: "Silverware Holders", weight: "1.5", image: "https://hariprasath112.github.io/moveout/images/76.png" },
+    { id: 77, name: "Small Pan", weight: "2.3", image: "https://hariprasath112.github.io/moveout/images/77.png" },
+    { id: 78, name: "Small Pot", weight: "3.0", image: "https://hariprasath112.github.io/moveout/images/78.png" },
+    { id: 79, name: "Storage Containers", weight: "2.0", image: "https://hariprasath112.github.io/moveout/images/79.png" },
+    { id: 80, name: "Waste Basket", weight: "2.0", image: "https://hariprasath112.github.io/moveout/images/80.png" },
+    { id: 81, name: "Water Bottle", weight: "1.0", image: "https://hariprasath112.github.io/moveout/images/81.jpeg" },
+    { id: 82, name: "Ziploc Bags", weight: "1.0", image: "https://hariprasath112.github.io/moveout/images/82.png" },
+    { id: 83, name: "Board Games", weight: "2.5", image: "https://hariprasath112.github.io/moveout/images/83.jpeg" },
+    { id: 84, name: "Seasonal/Holiday", weight: "3.0", image: "https://hariprasath112.github.io/moveout/images/84.png" },
+    { id: 85, name: "Sports/Games", weight: "5.0", image: "https://hariprasath112.github.io/moveout/images/85.png" },
+    { id: 86, name: "Stuffed Animals", weight: "1.0", image: "https://hariprasath112.github.io/moveout/images/86.png" },
+    { id: 87, name: "Yoga Mats", weight: "2.5", image: "https://hariprasath112.github.io/moveout/images/87.png" },
+    { id: 88, name: "Brushes/Combs", weight: "0.3", image: "https://hariprasath112.github.io/moveout/images/88.png" },
+    { id: 89, name: "Deodarant", weight: "0.3", image: "https://hariprasath112.github.io/moveout/images/89.png" },
+    { id: 90, name: "First Aid", weight: "1.0", image: "https://hariprasath112.github.io/moveout/images/90.jpeg" },
+    { id: 91, name: "Sanitary Items", weight: "0.5", image: "https://hariprasath112.github.io/moveout/images/91.png" },
+    { id: 92, name: "Shampoo", weight: "1.0", image: "https://hariprasath112.github.io/moveout/images/92.png" },
+    { id: 93, name: "Soap", weight: "0.4", image: "https://hariprasath112.github.io/moveout/images/93.jpeg" },
+    { id: 94, name: "Toothpaste", weight: "0.3", image: "https://hariprasath112.github.io/moveout/images/94.png" },
+    { id: 95, name: "Backpack", weight: "2.2", image: "https://hariprasath112.github.io/moveout/images/95.jpeg" },
+    { id: 96, name: "Binder", weight: "1.5", image: "https://hariprasath112.github.io/moveout/images/96.jpeg" },
+    { id: 97, name: "Calculators", weight: "0.5", image: "https://hariprasath112.github.io/moveout/images/97.png" },
+    { id: 98, name: "Desk Chair", weight: "23", image: "https://hariprasath112.github.io/moveout/images/98.jpeg" },
+    { id: 99, name: "Memoboard", weight: "4.0", image: "https://hariprasath112.github.io/moveout/images/99.jpeg" },
+    { id: 100, name: "Mouse", weight: "0.1", image: "https://hariprasath112.github.io/moveout/images/100.jpeg" },
+    { id: 101, name: "Notebook", weight: "0.9", image: "https://hariprasath112.github.io/moveout/images/101.png" },
+    { id: 102, name: "Paper", weight: "0.01", image: "https://hariprasath112.github.io/moveout/images/102.png" },
+    { id: 103, name: "Paperclips, Magnetics Clips, Binder Clips", weight: "0.4", image: "https://hariprasath112.github.io/moveout/images/103.jpeg" },
+    { id: 104, name: "Pens and Pencil", weight: "0.3", image: "https://hariprasath112.github.io/moveout/images/104.png" },
+    { id: 105, name: "Ruler", weight: "0.2", image: "https://hariprasath112.github.io/moveout/images/105.jpeg" },
+    { id: 106, name: "Tablet", weight: "1.0", image: "https://hariprasath112.github.io/moveout/images/106.jpeg" },
+    { id: 107, name: "Tabletstand", weight: "1.2", image: "https://hariprasath112.github.io/moveout/images/107.jpeg" }
+  ];
+  

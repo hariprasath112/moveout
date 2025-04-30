@@ -14,8 +14,8 @@ export default function Submit() {
   const currentItem =
     itemDetails.find(i => i.id === id) || {
       id: 0,
-      name: 'error',
-      image: 'https://hogfurniture.co/cdn/shop/articles/Home_collection.png',
+      name: 'error :(',
+      image: 'https://hariprasath112.github.io/moveout/images/90.jpeg',
       weight: 0,
     };
 
@@ -80,13 +80,13 @@ export default function Submit() {
       <form className="item-form" onSubmit={handleSubmit}>
         {/* hidden fields */}
         <input type="hidden" name="user"         value={userkey}    readOnly />
+        <input type="hidden" name="item_id"     value={currentItem.id} readOnly />
         <input type="hidden" name="product_name" value={currentItem.name} readOnly />
 
         <div className="item-header">
           <h1 className="item-title">{currentItem.name}</h1>
           <img
             src={currentItem.image}
-            alt={currentItem.name}
             className="item-image"
           />
         </div>
