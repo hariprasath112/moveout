@@ -14,9 +14,7 @@ dist-ssr
 components
 public
 
-eslint.config.json
-package-lock.json
-package.json
+*.json
 bite.config.js
 
 .gitignore
