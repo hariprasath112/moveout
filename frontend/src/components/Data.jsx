@@ -1,6 +1,6 @@
 export const Users = {
-  '1111': { name: 'January' },
-  '2222': { name: 'February' },
+  '1111': { name: 'Binghamton University' },
+  '2222': { name: 'SUNY Broome' },
   '3333': { name: 'March' },
   '4444': { name: 'April' },
   '5555': { name: 'May' },
@@ -95,7 +95,7 @@ export const table8 = [
 
 export const table9 = [
   { id: 259, type: "lead", value: "table15", image: "https://hariprasath112.github.io/moveout/images/59.png", text: "Cooking/Prep Tools" },
-  { id: 275, type: "lead", value: "table16", image: "https://hariprasath112.github.io/moveout/images/75.png", text: "Dining Essentials" },
+  { id: 275, type: "lead", value: "table16", image: "https://hariprasath112.github.io/moveout/images/75.jpeg", text: "Dining Essentials" },
   { id: 272, type: "lead", value: "table17", image: "https://hariprasath112.github.io/moveout/images/72.png", text: "Storage Supplies" },
 
 ];
