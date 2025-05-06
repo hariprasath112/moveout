@@ -15,7 +15,7 @@ components
 public
 
 *.json
-bite.config.js
+vite.config.js
 
 .gitignore
 
