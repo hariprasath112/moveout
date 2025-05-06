@@ -14,8 +14,10 @@ dist-ssr
 components
 public
 
-*.json
-vite.config.js
+eslint.config.json
+package-lock.json
+package.json
+bite.config.js
 
 .gitignore
 
