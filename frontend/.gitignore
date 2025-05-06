@@ -12,7 +12,14 @@ dist
 dist-ssr
 *.local
 components
+public
 
+eslint.config.json
+package-lock.json
+package.json
+bite.config.js
+
+.gitignore
 
 
 # Editor directories and files
