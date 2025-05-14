@@ -1,4 +1,5 @@
 export const Users = {
+  '0000': { name: 'Test Location' },
   '1111': { name: 'Binghamton University' },
   '2222': { name: 'SUNY Broome' },
   '3333': { name: 'March' },
@@ -15,7 +16,7 @@ export const Users = {
 
 
 export const table1 = [
-  { id: 108, type: "lead", value: "table2", image: "https://hariprasath112.github.io/moveout/images/108.png", text: "Appliances" },
+  { id: 108, type: "lead", value: "table13", image: "https://hariprasath112.github.io/moveout/images/108.png", text: "Appliances" },
   { id: 109, type: "lead", value: "table3", image: "https://hariprasath112.github.io/moveout/images/109.png", text: "Bathroom" },
   { id: 110, type: "lead", value: "table4", image: "https://hariprasath112.github.io/moveout/images/110.png", text: "Bedroom" },
   { id: 111, type: "lead", value: "table5", image: "https://hariprasath112.github.io/moveout/images/111.png", text: "Books" },
@@ -23,26 +24,25 @@ export const table1 = [
   { id: 113, type: "lead", value: "table7", image: "https://hariprasath112.github.io/moveout/images/113.png", text: "Food" },
   { id: 114, type: "lead", value: "table8", image: "https://hariprasath112.github.io/moveout/images/114.png", text: "Furniture" },
   { id: 115, type: "lead", value: "table9", image: "https://hariprasath112.github.io/moveout/images/115.png", text: "Kitchen" },
-  { id: 116, type: "lead", value: "table10", image: "https://hariprasath112.github.io/moveout/images/116.png", text: "Misc" },
-  { id: 117, type: "lead", value: "table11", image: "https://hariprasath112.github.io/moveout/images/117.png", text: "Personal Care" },
+  { id: 116, type: "lead", value: "table10", image: "https://hariprasath112.github.io/moveout/images/116.png", text: "Other" },
+  { id: 117, type: "end", value: 117, image: "https://hariprasath112.github.io/moveout/images/117.png", text: "Personal Care" },
   { id: 118, type: "lead", value: "table12", image: "https://hariprasath112.github.io/moveout/images/118.png", text: "School/Office" },
+  { id: 320, type: "end", value: 120, image: "https://hariprasath112.github.io/moveout/images/120.jpeg", text: "Clothing" },
+  { id: 319, type: "end", value: 119, image: "https://hariprasath112.github.io/moveout/images/119.jpeg", text: "Misc" },
+  
 ];
 
-export const table2 = [
+export const table2 = [//unused
   { id: 208, type: "lead", value: "table13", image: "https://hariprasath112.github.io/moveout/images/8.png", text: "Cooking Appliances" },
   { id: 206, type: "lead", value: "table14", image: "https://hariprasath112.github.io/moveout/images/6.png", text: "Household Appliances" }
 ];
 
 export const table3 = [
-  { id: 13, type: "end", value: 13, image: "https://hariprasath112.github.io/moveout/images/13.jpeg", text: "Bath Towel" },
-  { id: 14, type: "end", value: 14, image: "https://hariprasath112.github.io/moveout/images/14.jpeg", text: "Garbage Can (small)" },
-  { id: 15, type: "end", value: 15, image: "https://hariprasath112.github.io/moveout/images/15.jpeg", text: "Ironing Board" },
+  { id: 13, type: "end", value: 13, image: "https://hariprasath112.github.io/moveout/images/13.jpeg", text: "Bath Towel/Wash Coth" },
   { id: 16, type: "end", value: 16, image: "https://hariprasath112.github.io/moveout/images/16.jpeg", text: "Laundry Basket" },
-  { id: 17, type: "end", value: 17, image: "https://hariprasath112.github.io/moveout/images/17.jpeg", text: "Laundry Hamper" },
   { id: 18, type: "end", value: 18, image: "https://hariprasath112.github.io/moveout/images/18.jpeg", text: "Shower Caddies" },
   { id: 19, type: "end", value: 19, image: "https://hariprasath112.github.io/moveout/images/19.jpeg", text: "Shower Curtain" },
   { id: 20, type: "end", value: 20, image: "https://hariprasath112.github.io/moveout/images/20.jpeg", text: "Shower Hooks" },
-  { id: 21, type: "end", value: 21, image: "https://hariprasath112.github.io/moveout/images/21.jpeg", text: "Wash Cloth" },
 ];
 
 export const table4 = [
@@ -56,9 +56,8 @@ export const table4 = [
 ];
 
 export const table5 = [
-  { id: 29, type: "end", value: 29, image: "https://hariprasath112.github.io/moveout/images/29.jpeg", text: "Large Textbook" },
-  { id: 30, type: "end", value: 30, image: "https://hariprasath112.github.io/moveout/images/30.jpeg", text: "Small Paperback" },
-  { id: 31, type: "end", value: 31, image: "https://hariprasath112.github.io/moveout/images/31.jpeg", text: "Small Textbook" },
+  { id: 29, type: "end", value: 29, image: "https://hariprasath112.github.io/moveout/images/29.jpeg", text: "Hard Cover" },
+  { id: 30, type: "end", value: 30, image: "https://hariprasath112.github.io/moveout/images/30.jpeg", text: "Soft Cover" },
 ];
 
 export const table6 = [
@@ -85,7 +84,7 @@ export const table7 = [
 export const table8 = [
   { id: 47, type: "end", value: 47, image: "https://hariprasath112.github.io/moveout/images/47.png", text: "Chairs" },
   { id: 48, type: "end", value: 48, image: "https://hariprasath112.github.io/moveout/images/48.png", text: "Dressers" },
-  { id: 49, type: "end", value: 49, image: "https://hariprasath112.github.io/moveout/images/49.avif", text: "Floor Lamps" },
+  { id: 49, type: "end", value: 49, image: "https://hariprasath112.github.io/moveout/images/49.png", text: "Floor Lamps" },
   { id: 50, type: "end", value: 50, image: "https://hariprasath112.github.io/moveout/images/50.png", text: "Futon" },
   { id: 51, type: "end", value: 51, image: "https://hariprasath112.github.io/moveout/images/51.png", text: "Plastic Drawer" },
   { id: 52, type: "end", value: 52, image: "https://hariprasath112.github.io/moveout/images/52.png", text: "Plastic Drawer - Wide" },
@@ -105,7 +104,6 @@ export const table10 = [
   { id: 83, type: "end", value: 83, image: "https://hariprasath112.github.io/moveout/images/83.jpeg", text: "Board Games" },
   { id: 84, type: "end", value: 84, image: "https://hariprasath112.github.io/moveout/images/84.png", text: "Seasonal/Holiday" },
   { id: 85, type: "end", value: 85, image: "https://hariprasath112.github.io/moveout/images/85.png", text: "Sports/Games" },
-  { id: 86, type: "end", value: 86, image: "https://hariprasath112.github.io/moveout/images/86.png", text: "Stuffed Animals" },
   { id: 87, type: "end", value: 87, image: "https://hariprasath112.github.io/moveout/images/87.png", text: "Yoga Mats" },
 ];
 
@@ -120,25 +118,22 @@ export const table11 = [
 ];
 
 export const table12 = [
-  { id: 307, type: "lead", value: "table18", image: "https://hariprasath112.github.io/moveout/images/107.jpeg", text: "Tech/Workspace" },
-  { id: 296, type: "lead", value: "table19", image: "https://hariprasath112.github.io/moveout/images/96.jpeg", text: "School/Work Supplies" },
+  { id: 307, type: "lead", value: "table18", image: "https://hariprasath112.github.io/moveout/images/107.jpeg", text: "Tech (Calculators, mouse, etc)" },
+  { id: 296, type: "lead", value: "table19", image: "https://hariprasath112.github.io/moveout/images/96.jpeg", text: "Loose Supplies" },
 ];
 export const table13 = [
   { id: 1, type: "end", value: 1, image: "https://hariprasath112.github.io/moveout/images/1.png", text: "Airfryer" },
-  { id: 4, type: "end", value: 4, image: "https://hariprasath112.github.io/moveout/images/4.png", text: "Electric Kettle" },
   { id: 8, type: "end", value: 8, image: "https://hariprasath112.github.io/moveout/images/8.png", text: "Rice Cooker" },
-  { id: 9, type: "end", value: 9, image: "https://hariprasath112.github.io/moveout/images/9.png", text: "Toaster" },
   { id: 10, type: "end", value: 10, image: "https://hariprasath112.github.io/moveout/images/10.png", text: "Toaster Oven" },
-  { id: 11, type: "end", value: 11, image: "https://hariprasath112.github.io/moveout/images/11.png", text: "Waffle Maker" },
-];
-
-export const table14 = [
   { id: 2, type: "end", value: 2, image: "https://hariprasath112.github.io/moveout/images/2.png", text: "Blender" },
-  { id: 3, type: "end", value: 3, image: "https://hariprasath112.github.io/moveout/images/3.png", text: "Coffee Maker" },
-  { id: 5, type: "end", value: 5, image: "https://hariprasath112.github.io/moveout/images/5.png", text: "Iron" },
   { id: 6, type: "end", value: 6, image: "https://hariprasath112.github.io/moveout/images/6.png", text: "Microwave" },
   { id: 7, type: "end", value: 7, image: "https://hariprasath112.github.io/moveout/images/7.jpeg", text: "Minifridge" },
   { id: 12, type: "end", value: 12, image: "https://hariprasath112.github.io/moveout/images/12.png", text: "Window AC" },
+
+];
+
+export const table14 = [//unused
+  { id: 2, type: "end", value: 2, image: "https://hariprasath112.github.io/moveout/images/2.png", text: "Blender" },
 ];
 export const table15 = [
   { id: 56, type: "end", value: 56, image: "https://hariprasath112.github.io/moveout/images/56.png", text: "Bottle Opener" },
@@ -178,7 +173,6 @@ export const table17 = [
 ];
 
 export const table18 = [
-  { id: 98, type: "end", value: 98, image: "https://hariprasath112.github.io/moveout/images/98.jpeg", text: "Desk Chair" },
   { id: 99, type: "end", value: 99, image: "https://hariprasath112.github.io/moveout/images/99.jpeg", text: "Memoboard" },
   { id: 100, type: "end", value: 100, image: "https://hariprasath112.github.io/moveout/images/100.jpeg", text: "Mouse" },
   { id: 106, type: "end", value: 106, image: "https://hariprasath112.github.io/moveout/images/106.jpeg", text: "Tablet" },
@@ -186,14 +180,10 @@ export const table18 = [
 ];
 
 export const table19 = [
-  { id: 95, type: "end", value: 95, image: "https://hariprasath112.github.io/moveout/images/95.jpeg", text: "Backpack" },
-  { id: 96, type: "end", value: 96, image: "https://hariprasath112.github.io/moveout/images/96.jpeg", text: "Binder" },
-  { id: 97, type: "end", value: 97, image: "https://hariprasath112.github.io/moveout/images/97.png", text: "Calculators" },
-  { id: 101, type: "end", value: 101, image: "https://hariprasath112.github.io/moveout/images/101.png", text: "Notebook" },
-  { id: 102, type: "end", value: 102, image: "https://hariprasath112.github.io/moveout/images/102.png", text: "Paper" },
+  { id: 95, type: "end", value: 95, image: "https://hariprasath112.github.io/moveout/images/95.jpeg", text: "Backpack" },,
+  { id: 102, type: "end", value: 102, image: "https://hariprasath112.github.io/moveout/images/102.png", text: "Binders, Paper, Notebook" },
   { id: 103, type: "end", value: 103, image: "https://hariprasath112.github.io/moveout/images/103.jpeg", text: "Paperclips, Magnetics Clips, Binder Clips" },
-  { id: 104, type: "end", value: 104, image: "https://hariprasath112.github.io/moveout/images/104.png", text: "Pens and Pencil" },
-  { id: 105, type: "end", value: 105, image: "https://hariprasath112.github.io/moveout/images/105.jpeg", text: "Ruler" },
+  { id: 104, type: "end", value: 104, image: "https://hariprasath112.github.io/moveout/images/104.png", text: "Pens, Pencil, Ruler" }
 ];
 
 
@@ -210,7 +200,7 @@ export const table19 = [
     { id: 10, name: "Toaster Oven", weight: "13.5", image: "https://hariprasath112.github.io/moveout/images/10.png" },
     { id: 11, name: "Waffle Maker", weight: "4.9", image: "https://hariprasath112.github.io/moveout/images/11.png" },
     { id: 12, name: "Window AC", weight: "74.5", image: "https://hariprasath112.github.io/moveout/images/12.png" },
-    { id: 13, name: "Bath Towel", weight: "1.2", image: "https://hariprasath112.github.io/moveout/images/13.jpeg" },
+    { id: 13, name: "Bath Towel/Wash Cloth", weight: "1.2", image: "https://hariprasath112.github.io/moveout/images/13.jpeg" },
     { id: 14, name: "Garbage Can (small)", weight: "2.2", image: "https://hariprasath112.github.io/moveout/images/14.jpeg" },
     { id: 15, name: "Ironing Board", weight: "16.1", image: "https://hariprasath112.github.io/moveout/images/15.jpeg" },
     { id: 16, name: "Laundry Basket", weight: "2.9", image: "https://hariprasath112.github.io/moveout/images/16.jpeg" },
@@ -226,8 +216,8 @@ export const table19 = [
     { id: 26, name: "Sheets and Pillowcases", weight: "2.0", image: "https://hariprasath112.github.io/moveout/images/26.jpeg" },
     { id: 27, name: "Curtains", weight: "2.0", image: "https://hariprasath112.github.io/moveout/images/27.jpeg" },
     { id: 28, name: "Rugs", weight: "15.0", image: "https://hariprasath112.github.io/moveout/images/28.jpeg" },
-    { id: 29, name: "Large Textbook", weight: "5.0", image: "https://hariprasath112.github.io/moveout/images/29.jpeg" },
-    { id: 30, name: "Small Paperback", weight: "0.6", image: "https://hariprasath112.github.io/moveout/images/30.jpeg" },
+    { id: 29, name: "Hard Cover", weight: "5.0", image: "https://hariprasath112.github.io/moveout/images/29.jpeg" },
+    { id: 30, name: "Soft Cover", weight: "0.6", image: "https://hariprasath112.github.io/moveout/images/30.jpeg" },
     { id: 31, name: "Small Textbook", weight: "2.75", image: "https://hariprasath112.github.io/moveout/images/31.jpeg" },
     { id: 32, name: "Hair Dryer", weight: "2.0", image: "https://hariprasath112.github.io/moveout/images/32.jpeg" },
     { id: 33, name: "Standing Fan", weight: "10.6", image: "https://hariprasath112.github.io/moveout/images/33.png" },
@@ -246,7 +236,7 @@ export const table19 = [
     { id: 46, name: "Dried Soup", weight: "0.2", image: "https://hariprasath112.github.io/moveout/images/46.jpeg" },
     { id: 47, name: "Chairs", weight: "17.5", image: "https://hariprasath112.github.io/moveout/images/47.png" },
     { id: 48, name: "Dressers", weight: "30.0", image: "https://hariprasath112.github.io/moveout/images/48.png" },
-    { id: 49, name: "Floor Lamps", weight: "8.8", image: "https://hariprasath112.github.io/moveout/images/49.avif" },
+    { id: 49, name: "Floor Lamps", weight: "8.8", image: "https://hariprasath112.github.io/moveout/images/49.png" },
     { id: 50, name: "Futon", weight: "175", image: "https://hariprasath112.github.io/moveout/images/50.png" },
     { id: 51, name: "Plastic Drawer", weight: "7.8", image: "https://hariprasath112.github.io/moveout/images/51.png" },
     { id: 52, name: "Plastic Drawer - Wide", weight: "11.0", image: "https://hariprasath112.github.io/moveout/images/52.png" },
@@ -299,11 +289,13 @@ export const table19 = [
     { id: 99, name: "Memoboard", weight: "4.0", image: "https://hariprasath112.github.io/moveout/images/99.jpeg" },
     { id: 100, name: "Mouse", weight: "0.1", image: "https://hariprasath112.github.io/moveout/images/100.jpeg" },
     { id: 101, name: "Notebook", weight: "0.9", image: "https://hariprasath112.github.io/moveout/images/101.png" },
-    { id: 102, name: "Paper", weight: "0.01", image: "https://hariprasath112.github.io/moveout/images/102.png" },
+    { id: 102, name: "Binders, Paper, Notebook", weight: "0.01", image: "https://hariprasath112.github.io/moveout/images/102.png" },
     { id: 103, name: "Paperclips, Magnetics Clips, Binder Clips", weight: "0.4", image: "https://hariprasath112.github.io/moveout/images/103.jpeg" },
-    { id: 104, name: "Pens and Pencil", weight: "0.3", image: "https://hariprasath112.github.io/moveout/images/104.png" },
+    { id: 104, name: "Pens, Pencil, Ruler", weight: "0.3", image: "https://hariprasath112.github.io/moveout/images/104.png" },
     { id: 105, name: "Ruler", weight: "0.2", image: "https://hariprasath112.github.io/moveout/images/105.jpeg" },
     { id: 106, name: "Tablet", weight: "1.0", image: "https://hariprasath112.github.io/moveout/images/106.jpeg" },
-    { id: 107, name: "Tabletstand", weight: "1.2", image: "https://hariprasath112.github.io/moveout/images/107.jpeg" }
+    { id: 107, name: "Tabletstand", weight: "1.2", image: "https://hariprasath112.github.io/moveout/images/107.jpeg" },
+    { id: 119, name: "Miscellaneous", weight: "0", image: "https://hariprasath112.github.io/moveout/images/119.jpeg" },
+    { id: 117, name: "Personal Care", weight: "0", image: "https://hariprasath112.github.io/moveout/images/117.png" },
   ];
   
