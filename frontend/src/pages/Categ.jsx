@@ -3,7 +3,7 @@ import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import Navbar from '../components/Navbar.jsx'
 import Box from '../components/Box.jsx'
 import '../style.css'
-import { Users, table1, table2, table3, table4, table5, table6, table7, table8, table9, table10, table11, table12, table13, table14, table15, table16, table17, table18, table19
+import { Users, table1, table2, table3, table4, table5, table6, table7, table8, table9, table10, table11, table12, table13, table14, table15, table16, table17, table18, table19,table20
  } from '../components/Data.jsx'
 
 function Categ() {
@@ -126,6 +126,9 @@ function Categ() {
             case 'table19':
               setCurrentList(table19);
               next=table19;
+            case 'table20':
+              setCurrentList(table20);
+              next=table20;
               break;
 
           default:
