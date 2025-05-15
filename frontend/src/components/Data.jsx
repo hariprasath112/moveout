@@ -29,6 +29,7 @@ export const table1 = [
   { id: 118, type: "lead", value: "table12", image: "https://hariprasath112.github.io/moveout/images/118.png", text: "School/Office" },
   { id: 320, type: "end", value: 120, image: "https://hariprasath112.github.io/moveout/images/120.jpeg", text: "Clothing" },
   { id: 321, type: "end", value: 121, image: "https://hariprasath112.github.io/moveout/images/121.jpeg", text: "Rugs/Curtains" },
+  { id: 322, type: "end", value: 211, image: "https://hariprasath112.github.io/moveout/images/122.jpg", text: "Cleaning Supplies" },
   { id: 319, type: "end", value: 119, image: "https://hariprasath112.github.io/moveout/images/119.jpeg", text: "Misc" },
   
 ];
@@ -324,6 +325,7 @@ export const table20 = [
     { id: 208, name: "Misc - Kitchen", weight: "0", image: "https://hariprasath112.github.io/moveout/images/115.png" },
    { id: 209, name: "Misc - Other", weight: "0", image: "https://hariprasath112.github.io/moveout/images/115.png" },
     { id: 210, name: "Misc - School/Office", weight: "0", image: "https://hariprasath112.github.io/moveout/images/118.png" },
+    { id: 211, name: "Cleaning Supplies", weight: "0", image: "https://hariprasath112.github.io/moveout/images/121.jpg" },
 
   ];
   

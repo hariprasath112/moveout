@@ -20,7 +20,7 @@ export default function Submit() {
 
   const [quantity,   setQuantity]   = useState(currentItem.quantity || 1);
   const [weight,     setWeight]     = useState(currentItem.weight);
-  const [isEditable, setIsEditable] = useState(false);
+  const [isEditable, setIsEditable] = useState(currentItem.weight === "0");
   const [submitting, setSubmitting] = useState(false);
 
   const handleSubmit = async (evt) => {
@@ -119,9 +119,14 @@ export default function Submit() {
             edit
           </span>
         </div>
+        {weight <= 0 && (
+  <p style={{ color: 'red', textAlign:'center' }}>
+    Please enter a non-zero weight
+  </p>
+)}
 
         <div className="slide-button">
-          <button type="submit" disabled={submitting}>
+          <button type="submit" disabled={submitting || weight <= 0}>
             {submitting ? 'Submitting…' : 'SUBMIT'}
           </button>
         </div>
