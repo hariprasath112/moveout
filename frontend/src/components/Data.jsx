@@ -325,7 +325,7 @@ export const table20 = [
     { id: 208, name: "Misc - Kitchen", weight: "0", image: "https://hariprasath112.github.io/moveout/images/115.png" },
    { id: 209, name: "Misc - Other", weight: "0", image: "https://hariprasath112.github.io/moveout/images/115.png" },
     { id: 210, name: "Misc - School/Office", weight: "0", image: "https://hariprasath112.github.io/moveout/images/118.png" },
-    { id: 211, name: "Cleaning Supplies", weight: "0", image: "https://hariprasath112.github.io/moveout/images/121.jpg" },
+    { id: 211, name: "Cleaning Supplies", weight: "0", image: "https://hariprasath112.github.io/moveout/images/122.jpg" },
 
   ];
   
