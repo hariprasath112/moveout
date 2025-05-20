@@ -86,9 +86,7 @@ html,body {
 /* -------BOX STARTS ----------------- */
 
 
-.boxImage{
-  max-width: 25vw;
-}
+
 
 /* Remove default hyperlink styles on .box-link and everything inside it */
 /* .box-link,
@@ -102,7 +100,7 @@ html,body {
 } */
 
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .passkeyForm {
     
     width: 90vw;
@@ -115,6 +113,8 @@ html,body {
     height: 30vw;               
     font-size: 28vw;   
   }
+
+
 }
 
 @media (min-width: 1200px) {
@@ -128,11 +128,12 @@ html,body {
 /* Grid container for boxes */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Doubled box size */
-  gap: 1.5rem;  /* Increased spacing between boxes */
+  /* try two items at 45vw each (plus gap), then auto‐shrink to 1fr if it can't */
+  grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+  gap: 1.5rem;
   padding: 2rem;
-  justify-content: center;
 }
+
 
 /* Box container */
 .box {
@@ -148,24 +149,44 @@ html,body {
 /* Image wrapper */
 /* Image container: Controls aspect ratio */
 /* Image container with fixed aspect ratio */
-.image-container {
+/* .image-container {
   width: 100%;
-  height: 300px; /* Ensures consistent box height */
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Ensures no overflow */
+  overflow: hidden;
+} */
+ /* .image-container {
+  width: 100%;
+  height: 300px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+} */
+.image-container {
+  width: 100%;
+  /* make the container 1:1 (perfect square) or 4/3 if you prefer */
+  aspect-ratio: 1 / 1;    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
-
 /* Image inside container */
-.boxImage {
+/* .boxImage {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Fills the box without extreme shrinking */
+  object-fit: contain; 
   max-width: 100%;
   max-height: 100%;
-}
+} */
 
+.boxImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
 
 /* Title text */
 .boxText {

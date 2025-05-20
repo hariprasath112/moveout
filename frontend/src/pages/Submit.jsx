@@ -20,7 +20,7 @@ export default function Submit() {
 
   const [quantity,   setQuantity]   = useState(currentItem.quantity || 1);
   const [weight,     setWeight]     = useState(currentItem.weight);
-  const [isEditable, setIsEditable] = useState(currentItem.weight === "0");
+  const [isEditable, setIsEditable] = useState(currentItem.weight === "");
   const [submitting, setSubmitting] = useState(false);
 
   const handleSubmit = async (evt) => {
