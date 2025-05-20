@@ -113,26 +113,33 @@ html,body {
     height: 30vw;               
     font-size: 28vw;   
   }
-
-
-}
-
-@media (min-width: 1200px) {
-  .submit-wrapper {
-    font-size: 20px;
-  }
-}
-
-
-/* box */
-/* Grid container for boxes */
-.grid-container {
+  .grid-container {
   display: grid;
   /* try two items at 45vw each (plus gap), then auto‐shrink to 1fr if it can't */
   grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
   gap: 1.5rem;
   padding: 2rem;
 }
+
+}
+
+@media (min-width: 600px) {
+  .submit-wrapper {
+    font-size: 20px;
+  }
+  .grid-container {
+  display: grid;
+  /* try two items at 45vw each (plus gap), then auto‐shrink to 1fr if it can't */
+  grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+}
+
+
+/* box */
+/* Grid container for boxes */
+
 
 
 /* Box container */
