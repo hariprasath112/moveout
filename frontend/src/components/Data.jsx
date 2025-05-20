@@ -16,21 +16,26 @@ export const Users = {
 
 
 export const table1 = [
-  { id: 108, type: "lead", value: "table13", image: "https://hariprasath112.github.io/moveout/images/108.png", text: "Appliances" },
+  { id: 319, type: "end", value: 119, image: "https://hariprasath112.github.io/moveout/images/119.jpeg", text: "Misc" },
+  { id: 320, type: "end", value: 120, image: "https://hariprasath112.github.io/moveout/images/120.jpeg", text: "Clothing" },
+  
   { id: 109, type: "lead", value: "table3", image: "https://hariprasath112.github.io/moveout/images/109.png", text: "Bathroom" },
   { id: 110, type: "lead", value: "table4", image: "https://hariprasath112.github.io/moveout/images/110.png", text: "Bedroom" },
-  { id: 111, type: "lead", value: "table5", image: "https://hariprasath112.github.io/moveout/images/111.png", text: "Books" },
+  { id: 108, type: "lead", value: "table13", image: "https://hariprasath112.github.io/moveout/images/108.png", text: "Appliances" },
+   { id: 114, type: "lead", value: "table8", image: "https://hariprasath112.github.io/moveout/images/114.png", text: "Furniture" },
+  
   { id: 112, type: "lead", value: "table6", image: "https://hariprasath112.github.io/moveout/images/112.png", text: "Electronics" },
   { id: 113, type: "lead", value: "table7", image: "https://hariprasath112.github.io/moveout/images/113.png", text: "Food" },
-  { id: 114, type: "lead", value: "table8", image: "https://hariprasath112.github.io/moveout/images/114.png", text: "Furniture" },
+ 
   { id: 115, type: "lead", value: "table9", image: "https://hariprasath112.github.io/moveout/images/115.png", text: "Kitchen" },
+  { id: 111, type: "lead", value: "table5", image: "https://hariprasath112.github.io/moveout/images/111.png", text: "Books" },
   { id: 116, type: "lead", value: "table10", image: "https://hariprasath112.github.io/moveout/images/116.png", text: "Other" },
   { id: 117, type: "end", value: 117, image: "https://hariprasath112.github.io/moveout/images/117.png", text: "Personal Care" },
   { id: 118, type: "lead", value: "table12", image: "https://hariprasath112.github.io/moveout/images/118.png", text: "School/ Office" },
-  { id: 320, type: "end", value: 120, image: "https://hariprasath112.github.io/moveout/images/120.jpeg", text: "Clothing" },
+  
   { id: 321, type: "end", value: 121, image: "https://hariprasath112.github.io/moveout/images/121.jpeg", text: "Rugs/ Curtains" },
   { id: 322, type: "end", value: 211, image: "https://hariprasath112.github.io/moveout/images/122.jpg", text: "Cleaning Supplies" },
-  { id: 319, type: "end", value: 119, image: "https://hariprasath112.github.io/moveout/images/119.jpeg", text: "Misc" },
+  
   
 ];
 
