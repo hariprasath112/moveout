@@ -291,6 +291,68 @@ html,body {
   }
 }
 
+
+/* wrap the select so we can absolutely position our arrow */
+.item-header .input-group {
+  position: relative;
+  margin: 0 1.5rem; /* tweak horizontal spacing as needed */
+  flex: 0 0 auto;   /* don’t let it stretch */
+}
+
+/* hide native arrow, give a heavy border & custom padding */
+.item-header .input-group select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: 3px solid #000;
+  background-color: #fff;
+  padding: 0.5rem 2.5rem 0.5rem 1rem; /* space for our arrow */
+  font-weight: 600;
+  cursor: pointer;
+  width: 16rem;            /* fixed width on desktop */
+  font-size: 1.5rem;       /* desktop font */
+  line-height: 1;          /* squish vertical space a bit */
+  border-radius: 0;        /* match box corners */
+  box-sizing: border-box;
+}
+
+/* our custom arrow */
+.item-header .input-group::after {
+  content: "▾";
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 1.25rem;
+  color: #000;
+}
+
+/* MOBILE: stack & full‐width fluid sizing */
+@media (max-width: 600px) {
+  .item-header {
+    flex-wrap: wrap;
+  }
+
+  .item-header .input-group {
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  .item-header .input-group select {
+    width: 100%;
+    font-size: 4vw;         /* responsive font */
+    padding: 3vw 8vw 3vw 4vw; /* responsive padding */
+    background-position: calc(100% - 4vw) center;
+  }
+
+  .item-header .input-group::after {
+    font-size: 4vw;
+    right: 4vw;
+  }
+}
+
+
 /* -------------------------
    Details Container (QTY, Weight)
 ------------------------- */

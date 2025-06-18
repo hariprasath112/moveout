@@ -2,7 +2,7 @@ import React, { useState,useRef,useEffect } from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar.jsx';
 import '../style.css';
-import { itemDetails } from '../components/Data.jsx';
+import { sub, itemDetails } from '../components/Data.jsx';
 
 export default function Submit() {
   const navigate = useNavigate();
@@ -14,9 +14,15 @@ export default function Submit() {
     itemDetails.find(i => i.id === id) || {
       id: 0,
       name: 'error',
-      image: 'https://hogfurniture.co/cdn/shop/articles/Home_collection.png',
+      image: 'https://hariprasath112.github.io/moveout/images/100.jpeg',
       weight: 0,
     };
+
+
+  const subList = sub.filter(s => s.subof === id);
+
+  // state for dropdown selection, default to first if any
+  const [selection, setSelection] = useState(subList[0]?.text || '');
 
   // normalize to string so we can clear it easily
   const initialWeight = currentItem.weight ? String(currentItem.weight) : "";
@@ -57,14 +63,16 @@ const weightRef = useRef(null);
     // 2) Build the form‐style payload
     const data = new URLSearchParams();
     data.append('user',         userkey);
-    data.append('item_id',      currentItem.id);
-    data.append('product_name', currentItem.name);
+   data.append('category',      currentItem.name);
+    data.append('product_name', selection);
+   // data.append('subcategory',   selection);
     data.append('quantity',     quantity);
     data.append('weight',       weight);
 
     try {
       const res = await fetch(
-        'https://script.google.com/macros/s/AKfycbzg3qCqQpdm4iNpogvEv8M3Q14D6LygUFHLgNWZyBshrhZNrevWJ3upgnhxtcWWGYs2/exec',
+        'https://script.google.com/macros/s/AKfycbyTXcfnL8Y4ekefbZ8FpoEiGBlfu65hM85TSxm0wuyvqpxESu70oK60ID0G5k-VQ7y-1A/exec',
+        
         {
           method: 'POST',
           mode:   'cors',
@@ -102,8 +110,32 @@ const weightRef = useRef(null);
         <input type="hidden" name="item_id"     value={currentItem.id} readOnly />
         <input type="hidden" name="product_name" value={currentItem.name} readOnly />
 
+       
+       
+       
+       
+       
         <div className="item-header">
           <h1 className="item-title">{currentItem.name}</h1>
+          
+         {subList.length > 0 && (
+          <div className="input-group">
+     
+            <select
+              id="subcat"
+              name="subcategory"
+              value={selection}
+              onChange={e => setSelection(e.target.value)}
+            >
+              {subList.map((opt,i) => (
+                <option key={i} value={opt.text}>
+                  {opt.text}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
+
           <img
             src={currentItem.image}
             alt={currentItem.name}

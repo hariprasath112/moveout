@@ -16,7 +16,7 @@ export const Users = {
 
 
 export const categ = [
-  { id: 1, type: "end", value: 1, image: "https://hariprasath112.github.io/moveout/images/119.jpeg", text: "Miscellaneous" },
+  { id: 1, type: "end", value: 1, image: "https://hariprasath112.github.io/moveout/images/119.jpeg", text: "Misc" },
   { id: 2, type: "end", value: 2, image: "https://hariprasath112.github.io/moveout/images/120.jpeg", text: "Clothing" },
   
   { id: 3, type: "end", value: 3, image: "https://hariprasath112.github.io/moveout/images/109.png", text: "Bathroom" },
@@ -157,7 +157,7 @@ export const sub = [
     { id: 7, name: "Electronics", weight: "", image: "https://hariprasath112.github.io/moveout/images/112.png" },
      { id: 8, name: "Food", weight: "", image: "https://hariprasath112.github.io/moveout/images/113.png" },
     { id: 9, name: "Kitchen", weight: "", image: "https://hariprasath112.github.io/moveout/images/115.png" },
-  { id: 10, name: "ooks", weight: "", image: "https://hariprasath112.github.io/moveout/images/111.png" },
+  { id: 10, name: "Books", weight: "", image: "https://hariprasath112.github.io/moveout/images/111.png" },
    
     { id: 11, name: "Other", weight: "", image: "https://hariprasath112.github.io/moveout/images/115.png" },
     { id: 12, name: "Care", weight: "", image: "https://hariprasath112.github.io/moveout/images/117.png" },
