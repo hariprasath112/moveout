@@ -120,6 +120,15 @@ html,body {
   gap: 1.5rem;
   padding: 2rem;
 }
+.boxText {
+  font-weight: bold;
+  font-size: 7vw; /* Make text bigger */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0;
+}
 
 }
 
@@ -133,6 +142,16 @@ html,body {
   grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
   gap: 1.5rem;
   padding: 2rem;
+}
+
+.boxText {
+  font-weight: bold;
+  font-size: 3vw; /* Make text bigger */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0;
 }
 }
 
@@ -174,10 +193,10 @@ html,body {
 .image-container {
   width: 100%;
   /* make the container 1:1 (perfect square) or 4/3 if you prefer */
-  aspect-ratio: 1 / 1;    
+  aspect-ratio: 3 / 2;    
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; 
   overflow: hidden;
 }
 /* Image inside container */
@@ -196,12 +215,7 @@ html,body {
 }
 
 /* Title text */
-.boxText {
-  font-weight: bold;
-  font-size: 2rem; /* Make text bigger */
-  padding: 1rem;
-  margin: 0;
-}
+
 
 
 /*-----------------------SUBMIT----PAGE-----------------------------------*/
@@ -320,7 +334,7 @@ html,body {
 
 /* "edit" link */
 .edit-text {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: gray;
   text-align: right;
   cursor: pointer;

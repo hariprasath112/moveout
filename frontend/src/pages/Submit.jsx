@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useRef,useEffect } from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar.jsx';
 import '../style.css';
@@ -18,11 +18,31 @@ export default function Submit() {
       weight: 0,
     };
 
+  // normalize to string so we can clear it easily
+  const initialWeight = currentItem.weight ? String(currentItem.weight) : "";
+
+
   const [quantity,   setQuantity]   = useState(currentItem.quantity || 1);
-  const [weight,     setWeight]     = useState(currentItem.weight);
-  const [isEditable, setIsEditable] = useState(currentItem.weight === "");
+//  const [weight,     setWeight]     = useState(currentItem.weight);
+//  const [isEditable, setIsEditable] = useState(currentItem.weight === "");
   const [submitting, setSubmitting] = useState(false);
 
+  const [weight,   setWeight]     = useState(initialWeight);
+  const [isEditable, setIsEditable] = useState(initialWeight === "");
+
+const weightRef = useRef(null);
+
+  // whenever we enter edit-mode, clear & focus
+  useEffect(() => {
+    if (isEditable && weightRef.current) {
+      weightRef.current.value = ""          // optional, dom sync
+      weightRef.current.focus();            // drop cursor inside
+    }
+  }, [isEditable]);
+
+
+
+  
   const handleSubmit = async (evt) => {
     evt.preventDefault();
 
@@ -106,6 +126,7 @@ export default function Submit() {
             <label>ESTIMATED WEIGHT</label>
             <div className="weight-input">
               <input
+                ref={weightRef}
                 type="number"
                 name="weight"
                 value={weight}
@@ -115,7 +136,7 @@ export default function Submit() {
               <span>LB</span>
             </div>
           </div>
-          <span className="edit-text" onClick={() => setIsEditable(true)}>
+          <span className="edit-text" onClick={() => {setIsEditable(true);}}>
             edit
           </span>
         </div>

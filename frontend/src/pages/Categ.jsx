@@ -21,6 +21,7 @@ function Categ() {
 
 
     useEffect(() => {
+      
       // Set the initial state to the first table
       const onPop = () => {
         setHistoryStack(stack => {
@@ -41,9 +42,18 @@ function Categ() {
       window.addEventListener('popstate', onPop)
       return () => window.removeEventListener('popstate', onPop)
     }, [navigate]);
-
-
     //handle box click
+
+useEffect(() => {
+  // find the element that actually scrolls on all browsers
+  const scroller = document.scrollingElement
+                || document.documentElement
+                || document.body;
+  // jump right back to the top
+  scroller.scrollTop = 0;
+  scroller.scrollLeft = 0;
+}, [currentList]);
+
     const handleBoxClick = (item) =>{
       if (item.type==='end'){
           navigate(`/${passkey}/submit/${item.value}`);
@@ -135,7 +145,10 @@ function Categ() {
             break;
         }
         setCurrentList(next);
+        
+
         window.history.pushState({}, '');
+        //window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     };
    
