@@ -5,7 +5,16 @@ import '../style.css';
 import { sub, itemDetails } from '../components/Data.jsx';
 
 export default function Submit() {
+
+  useEffect(() => {
+    // for <html>
+    document.documentElement.scrollTop = document.documentElement.scrollHeight;
+    // for <body>
+    document.body.scrollTop = document.body.scrollHeight;
+  }, []);
   const navigate = useNavigate();
+
+
   const {passkey, value } = useParams();
   const id = Number(value);
   const userkey = passkey;
@@ -98,6 +107,10 @@ const weightRef = useRef(null);
       alert('Submission failed:\nPlease try again :(');
       setSubmitting(false);
     }
+
+
+
+
   };
 
   return (
@@ -183,6 +196,7 @@ const weightRef = useRef(null);
             {submitting ? 'Submitting…' : 'SUBMIT'}
           </button>
         </div>
+        
       </form>
     </div>
   );

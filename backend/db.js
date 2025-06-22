@@ -1,10 +1,11 @@
-const { Pool } = require('pg')
-const pool = new Pool({
-    host: 'db',
-    port: '1701',
-    user: 'hs43',
-    password: 'qwerty',
-    database: 'db123'
-})
+const { Pool } = require('pg');
+require('dotenv').config();
 
-module.exports = pool
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: process.env.NODE_ENV === "production" ? { rejectUnauthorized: false } : false
+});
+
+module.exports = {
+  query: (text, params) => pool.query(text, params),
+};
