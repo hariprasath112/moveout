@@ -1,103 +1,134 @@
-import React, { useState,useRef,useEffect } from 'react';
-import { useParams, useLocation, useNavigate } from 'react-router-dom';
-import Navbar from '../components/Navbar.jsx';
+// src/pages/Submit.jsx
+import React, { useState, useEffect, useRef } from 'react';
+import { useParams, useNavigate }            from 'react-router-dom';
+import Navbar                                from '../components/Navbar.jsx';
 import '../style.css';
-import { sub, itemDetails } from '../components/Data.jsx';
 
 export default function Submit() {
-
-  useEffect(() => {
-    // for <html>
-    document.documentElement.scrollTop = document.documentElement.scrollHeight;
-    // for <body>
-    document.body.scrollTop = document.body.scrollHeight;
-  }, []);
   const navigate = useNavigate();
-
-
-  const {passkey, value } = useParams();
-  const id = Number(value);
+  const { passkey, value } = useParams();
+  const catId = Number(value);
   const userkey = passkey;
 
-  const currentItem =
-    itemDetails.find(i => i.id === id) || {
-      id: 0,
-      name: 'error',
-      image: 'https://hariprasath112.github.io/moveout/images/100.jpeg',
-      weight: 0,
-    };
+  // data.csv state
+  const [categories, setCategories] = useState([]);
+  const [subItems,   setSubItems]   = useState([]);
+  const [loadingData, setLoadingData] = useState(true);
+
+  // script.csv state
+  const [scriptUrl, setScriptUrl]   = useState('');
+  const [loadingScript, setLoadingScript] = useState(true);
+
+  // form state
+  const [selection, setSelection] = useState('');
+  const [quantity,  setQuantity ] = useState(1);
+  const [weight,    setWeight   ] = useState('');
+  const [submitting,setSubmitting] = useState(false);
+
+  // after loadingData finishes...
+const firstImage = categories[0]?.image || '';
 
 
-  const subList = sub.filter(s => s.subof === id);
+  const weightRef = useRef(null);
 
-  // state for dropdown selection, default to first if any
-  const [selection, setSelection] = useState(subList[0]?.text || '');
-
-  // normalize to string so we can clear it easily
-  const initialWeight = currentItem.weight ? String(currentItem.weight) : "";
-
-
-  const [quantity,   setQuantity]   = useState(currentItem.quantity || 1);
-//  const [weight,     setWeight]     = useState(currentItem.weight);
-//  const [isEditable, setIsEditable] = useState(currentItem.weight === "");
-  const [submitting, setSubmitting] = useState(false);
-
-  const [weight,   setWeight]     = useState(initialWeight);
-  const [isEditable, setIsEditable] = useState(initialWeight === "");
-
-const weightRef = useRef(null);
-
-  // whenever we enter edit-mode, clear & focus
+  // 1) load data.csv
   useEffect(() => {
-    if (isEditable && weightRef.current) {
-      weightRef.current.value = ""          // optional, dom sync
-      weightRef.current.focus();            // drop cursor inside
-    }
-  }, [isEditable]);
+    fetch('/data.csv')
+      .then(res => res.text())
+      .then(text => {
+        const rows = text.trim().split('\n').slice(1);
+        const cats = [], subs = [];
+        rows.forEach(line => {
+          const cols = line.split(',');
+          const id   = Number(cols[0]);
+          if (!id) return;
+          cats.push({ id, image: cols[1].trim(), text: cols[2].trim() });
+          cols.slice(3).forEach(cell => {
+            if (cell.trim()) subs.push({ subof: id, text: cell.trim() });
+          });
+        });
+        setCategories(cats);
+        setSubItems(subs);
+      })
+      .catch(err => console.error('data.csv load error', err))
+      .finally(() => setLoadingData(false));
+  }, []);
 
+  // 2) load script.csv
+  useEffect(() => {
+    fetch('/script.csv')
+     .then(res => {
+       if (!res.ok) throw new Error(`HTTP ${res.status}`);
+       return res.text();
+     })
+     .then(text => {
+       const lines = text
+         .trim()
+         .split(/\r?\n/)
+         .map(l => l.trim())
+         .filter(l => l);
+       // first non-empty line is our URL:
+       if (lines.length > 0) {
+         setScriptUrl(lines[0]);
+       }
+     })
+      .catch(err => console.error('script.csv load error', err))
+      .finally(() => setLoadingScript(false));
+  }, []);
 
+  // default dropdown selection
+  const mySubs = subItems.filter(s => s.subof === catId);
+  useEffect(() => {
+    if (mySubs.length) setSelection(mySubs[0].text);
+  }, [mySubs]);
 
-  
-  const handleSubmit = async (evt) => {
-    evt.preventDefault();
+  if (loadingData || loadingScript) {
+    return (
+      <div className="submit-wrapper">
+        <Navbar/>
+        <p style={{ padding: '2rem' }}>Loading…</p>
+      </div>
+    );
+  }
 
-    // 1) Prevent posting if lookup failed
-    if (currentItem.id === 0) {
+  // find current category or fallback
+  const currentCat = categories.find(c => c.id === catId) || {
+    id:    0,
+    text:  'error',
+    image: firstImage
+  };
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+    if (currentCat.id === 0) {
       alert("Cannot submit: invalid item.");
       return;
     }
-
+    if (!weight) {
+      alert("Please enter a weight before submitting.");
+      return;
+    }
     setSubmitting(true);
 
-    // 2) Build the form‐style payload
-    const data = new URLSearchParams();
-    data.append('user',         userkey);
-   data.append('category',      currentItem.name);
-    data.append('product_name', selection);
-   // data.append('subcategory',   selection);
-    data.append('quantity',     quantity);
-    data.append('weight',       weight);
+    const data = new URLSearchParams({
+      user:         userkey,
+      category:     currentCat.text,
+      product_name: mySubs.length ? selection : currentCat.text,
+      quantity,
+      weight
+    });
 
     try {
-      const res = await fetch(
-        'https://script.google.com/macros/s/AKfycbyTXcfnL8Y4ekefbZ8FpoEiGBlfu65hM85TSxm0wuyvqpxESu70oK60ID0G5k-VQ7y-1A/exec',
-        
-        {
-          method: 'POST',
-          mode:   'cors',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-          },
-          body: data.toString(),
-        }
-      );
-      if (!res.ok) {
-        throw new Error(`Server returned ${res.status}`);
-      }
-
+      const res  = await fetch(scriptUrl, {
+        method: 'POST',
+        mode:   'cors',
+        headers:{ 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8', },
+        body:   data.toString()
+      });
+      console.log(scriptUrl, data.toString());
+      if (!res.ok) throw new Error(`Server returned ${res.status}`);
       const json = await res.json();
       if (json.status === 'success') {
-        // Navigate back to your categ page (or wherever)
         navigate(`/${userkey}`);
       } else {
         throw new Error(json.message || 'Unknown server error');
@@ -107,10 +138,6 @@ const weightRef = useRef(null);
       alert('Submission failed:\nPlease try again :(');
       setSubmitting(false);
     }
-
-
-
-
   };
 
   return (
@@ -119,39 +146,29 @@ const weightRef = useRef(null);
 
       <form className="item-form" onSubmit={handleSubmit}>
         {/* hidden fields */}
-        <input type="hidden" name="user"         value={userkey}    readOnly />
-        <input type="hidden" name="item_id"     value={currentItem.id} readOnly />
-        <input type="hidden" name="product_name" value={currentItem.name} readOnly />
+        <input type="hidden" name="user"         value={userkey}         readOnly/>
+        <input type="hidden" name="item_id"      value={currentCat.id}   readOnly/>
+        <input type="hidden" name="product_name" value={currentCat.text} readOnly/>
 
-       
-       
-       
-       
-       
         <div className="item-header">
-          <h1 className="item-title">{currentItem.name}</h1>
-          
-         {subList.length > 0 && (
-          <div className="input-group">
-     
-            <select
-              id="subcat"
-              name="subcategory"
-              value={selection}
-              onChange={e => setSelection(e.target.value)}
-            >
-              {subList.map((opt,i) => (
-                <option key={i} value={opt.text}>
-                  {opt.text}
-                </option>
-              ))}
-            </select>
-          </div>
-        )}
+          <h1 className="item-title">{currentCat.text}</h1>
+
+          {mySubs.length > 0 && (
+            <div className="input-group">
+              <select
+                value={selection}
+                onChange={e => setSelection(e.target.value)}
+              >
+                {mySubs.map((s,i) => (
+                  <option key={i} value={s.text}>{s.text}</option>
+                ))}
+              </select>
+            </div>
+          )}
 
           <img
-            src={currentItem.image}
-            alt={currentItem.name}
+            src={currentCat.image}
+            alt={currentCat.text}
             className="item-image"
           />
         </div>
@@ -161,42 +178,30 @@ const weightRef = useRef(null);
             <label>QTY</label>
             <input
               type="number"
-              name="quantity"
               value={quantity}
               min="1"
               onChange={e => setQuantity(e.target.value)}
             />
           </div>
+
           <div className="input-group">
             <label>ESTIMATED WEIGHT</label>
             <div className="weight-input">
               <input
-                ref={weightRef}
                 type="number"
-                name="weight"
                 value={weight}
-                disabled={!isEditable}
                 onChange={e => setWeight(e.target.value)}
               />
               <span>LB</span>
             </div>
           </div>
-          <span className="edit-text" onClick={() => {setIsEditable(true);}}>
-            edit
-          </span>
         </div>
-        {weight <= 0 && (
-  <p style={{ color: 'red', textAlign:'center' }}>
-    Please enter a non-zero weight
-  </p>
-)}
 
         <div className="slide-button">
-          <button type="submit" disabled={submitting || weight <= 0}>
+          <button type="submit" disabled={submitting}>
             {submitting ? 'Submitting…' : 'SUBMIT'}
           </button>
         </div>
-        
       </form>
     </div>
   );
