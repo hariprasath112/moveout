@@ -5,6 +5,11 @@ import Navbar                                from '../components/Navbar.jsx';
 import '../style.css';
 
 export default function Submit() {
+
+
+
+
+
   const navigate = useNavigate();
   const { passkey, value } = useParams();
   const catId = Number(value);
@@ -15,9 +20,21 @@ export default function Submit() {
   const [subItems,   setSubItems]   = useState([]);
   const [loadingData, setLoadingData] = useState(true);
 
+
+
   // script.csv state
   const [scriptUrl, setScriptUrl]   = useState('');
   const [loadingScript, setLoadingScript] = useState(true);
+
+  useEffect(() => {
+     // only run when loading is complete
+     if (!loadingData && !loadingScript) {
+       window.scrollTo({
+         top: document.documentElement.scrollHeight,
+         behavior: 'auto'  // or 'auto' if you don’t want the animation
+       });
+     }
+   }, [loadingData, loadingScript]);
 
   // form state
   const [selection, setSelection] = useState('');
@@ -27,12 +44,20 @@ export default function Submit() {
 
   // after loadingData finishes...
 const firstImage = categories[0]?.image || '';
+useEffect(() => {
+  // after everything has rendered…
+  window.scrollTo({
+    top: document.documentElement.scrollHeight,
+    behavior: 'smooth'    // or 'auto'
+  });
+}, []);
 
 
   const weightRef = useRef(null);
 
   // 1) load data.csv
   useEffect(() => {
+    
     fetch('/data.csv')
       .then(res => res.text())
       .then(text => {
@@ -202,6 +227,7 @@ const firstImage = categories[0]?.image || '';
             {submitting ? 'Submitting…' : 'SUBMIT'}
           </button>
         </div>
+        
       </form>
     </div>
   );
