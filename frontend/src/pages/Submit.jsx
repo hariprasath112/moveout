@@ -103,9 +103,11 @@ useEffect(() => {
 
   // default dropdown selection
   const mySubs = subItems.filter(s => s.subof === catId);
-  useEffect(() => {
-    if (mySubs.length) setSelection(mySubs[0].text);
-  }, [mySubs]);
+useEffect(() => {
+  if (mySubs.length > 0 && selection === '') {
+    setSelection(mySubs[0].text);
+  }
+}, [mySubs, selection]);
 
   if (loadingData || loadingScript) {
     return (
