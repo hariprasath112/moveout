@@ -42,6 +42,9 @@ export default function Submit() {
   const [weight,    setWeight   ] = useState('');
   const [submitting,setSubmitting] = useState(false);
 
+
+
+
   // after loadingData finishes...
 const firstImage = categories[0]?.image || '';
 useEffect(() => {
@@ -109,6 +112,12 @@ useEffect(() => {
   }
 }, [mySubs, selection]);
 
+  useEffect(() => {
+    if (weightRef.current) {
+      weightRef.current.focus();
+    }
+  }, [loadingData, loadingScript]);
+
   if (loadingData || loadingScript) {
     return (
       <div className="submit-wrapper">
@@ -133,6 +142,10 @@ useEffect(() => {
     }
     if (!weight) {
       alert("Please enter a weight before submitting.");
+      return;
+    }
+    if (!quantity || quantity < 1) {
+      alert("Please enter a valid quantity before submitting.");
       return;
     }
     setSubmitting(true);
@@ -207,6 +220,7 @@ useEffect(() => {
               type="number"
               value={quantity}
               min="1"
+
               onChange={e => setQuantity(e.target.value)}
             />
           </div>
@@ -215,6 +229,7 @@ useEffect(() => {
             <label>ESTIMATED WEIGHT</label>
             <div className="weight-input">
               <input
+                ref={weightRef}
                 type="number"
                 value={weight}
                 onChange={e => setWeight(e.target.value)}
