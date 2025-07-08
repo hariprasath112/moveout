@@ -87,6 +87,7 @@ const options = {
   cert: fs.readFileSync('/etc/letsencrypt/live/moveout.duckdns.org/fullchain.pem')
 };
 
+
 https.createServer(options, app)
      .listen(HTTPS_PORT, () => {
   console.log(`HTTPS server listening on port ${HTTPS_PORT}`);
