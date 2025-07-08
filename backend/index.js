@@ -1,5 +1,8 @@
 // index.js
-const express    = require('express');
+const fs      = require('fs');
+const http    = require('http');
+const https   = require('https');
+const express = require('express');
 const cors       = require('cors');
 const cookieParser = require('cookie-parser');
 const authRouter = require('./auth');
@@ -67,8 +70,29 @@ app.post('/logout', (req, res) => {
      .json({ success: true });
 });
 
-// 5) START SERVER
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, '0.0.0.0', () =>
-  console.log(`Server listening on 0.0.0.0:${PORT}`)
-);
+// 4) Redirect all HTTP → HTTPS
+const redirectApp = express();
+redirectApp.use((req, res) => {
+  const host = req.headers.host.replace(/:\d+$/, ''); // strip any port
+  return res.redirect(`https://${host}${req.url}`);
+});
+
+// 5) Spin up both servers
+const HTTPS_PORT = 443;
+const HTTP_PORT  = 80;
+
+// Read certs
+const options = {
+  key:  fs.readFileSync('/etc/letsencrypt/live/moveout.duckdns.org/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/moveout.duckdns.org/fullchain.pem')
+};
+
+https.createServer(options, app)
+     .listen(HTTPS_PORT, () => {
+  console.log(`HTTPS server listening on port ${HTTPS_PORT}`);
+});
+
+http.createServer(redirectApp)
+    .listen(HTTP_PORT, () => {
+  console.log(`HTTP redirect server listening on port ${HTTP_PORT}`);
+});
