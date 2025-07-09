@@ -1,7 +1,5 @@
 // index.js
-const fs      = require('fs');
-const http    = require('http');
-const https   = require('https');
+
 const express = require('express');
 const cors       = require('cors');
 const cookieParser = require('cookie-parser');
@@ -13,7 +11,12 @@ require('dotenv').config();
 const app = express();
 
 // 1) SECURITY / PARSING
-app.use(cors({ origin: true, credentials: true }));
+const FRONTEND = 'https://moptest.netlify.app';  // or your Netlify URL
+
+app.use(cors({
+  origin: FRONTEND,
+  credentials: true
+}));
 app.use(express.json());
 app.use(cookieParser());             // <— make sure this is *before* requireAuth
 

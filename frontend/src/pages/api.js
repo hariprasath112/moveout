@@ -1,5 +1,5 @@
 // src/api.js
-const BASE = 'http://3.143.204.225:4000';
+const BASE = 'https://moveout.duckdns.org';
 
 async function request(path, opts = {}) {
   const res = await fetch(`${BASE}${path}`, {
