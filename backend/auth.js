@@ -23,14 +23,15 @@ router.post('/login', async (req, res) => {
     { expiresIn: process.env.JWT_EXPIRES_IN }
   );
 
-  res
-    .cookie('token', token, {
-      httpOnly: true,
-      secure: true,
-      sameSite: 'lax',
-      maxAge: 1000 * 60 * 60 * 4
-    })
-    .json({ success: true });
+res
+  .cookie('token', token, {
+    httpOnly: true,
+    secure:   true,      // must be true for SameSite=None
+    sameSite: 'none',    // allow cross-site delivery
+    maxAge:   1000 * 60 * 60 * 4
+  })
+  .json({ success: true });
+
 });
 
 // POST /logout
