@@ -55,7 +55,7 @@ app.get('/script', requireAuth, async (req, res) => {
 
 app.get('/data', requireAuth, async (req, res) => {
   try {
-    const result = await pool.query('SELECT c.name, array_agg(s.name ORDER BY s.position) AS subs FROM categories c LEFT JOIN subcategories s ON s.category_id = c.id GROUP BY c.id, c.name;');
+    const result = await pool.query('SELECT c.name, c.image_url, array_agg(s.name ORDER BY s.position) AS subs FROM categories c LEFT JOIN subcategories s ON s.category_id = c.id GROUP BY c.id, c.name,c.image_url;');
     res.json(result.rows);
   } catch (err) {
     console.error(err);

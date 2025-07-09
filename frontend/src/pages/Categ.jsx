@@ -61,6 +61,7 @@ export default function Categ() {
     fetchData()
       .then(rows => {
         // rows is [{ name: 'Bathroom', subs: [...] }, …]
+        console.log('Categories:', rows);
         setCategories(rows);
       })
       .catch(err => {
@@ -106,7 +107,7 @@ export default function Categ() {
         {categories.map((cat, idx) => (
           <Box
             key={idx}
-            image={cat.image_url}  
+            image={cat.image}  
             text={cat.name}
             onClick={() => navigate(`/${passkey}/submit/${cat.id}`)}
           />
