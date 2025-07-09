@@ -46,7 +46,8 @@ app.get('/users', requireAuth,async (req, res) => {
 app.get('/script', requireAuth, async (req, res) => {
   try {
     const result = await pool.query('SELECT * FROM script');
-    res.json(result.rows);
+    if (!result[0]) return res.status(404).json({ error: 'No script found' })
+    res.json(result[0]);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Database error' });

@@ -107,9 +107,9 @@ export default function Categ() {
         {categories.map((cat, idx) => (
           <Box
             key={idx}
-            image={cat.image}  
+            image={cat.image_url}  
             text={cat.name}
-            onClick={() => navigate(`/${passkey}/submit/${cat.id}`)}
+            onClick={() => navigate(`/${passkey}/submit/${idx+1}`)}
           />
         ))}
       </div>
